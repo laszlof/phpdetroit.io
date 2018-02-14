@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "phpdetroit.io Website",
   "repository": "git@github.com:franksworld/phpdetroit.io.git",
-  "author": "Frank Laszlo <frank@franksworld.org>",
+  "author": "Frank Laszlo <frank@phpdetroit.io>",
   "license": "MIT",
   "scripts": {
     "dev": "grunt dev",
