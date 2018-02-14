@@ -127,7 +127,7 @@ ul li {
 }
 
 .section {
-    padding: 70px 0;
+    padding: 120px 0;
 }
 
 .section-title {
@@ -244,7 +244,7 @@ ul li {
 
 @media (min-width: 768px) {
     .section {
-        padding: 90px 0;
+        padding: 120px 0;
     }
 
     .section-title {
