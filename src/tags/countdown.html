@@ -1,0 +1,47 @@
+<countdown>
+  <div id="countdown" class="countdown">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-2">
+                  <h3 class="section-title">Event Start</h3>
+              </div>
+              <div class="col-md-10">
+                  <div ref="container" class="is-countdown">
+                    <span class="countdown-row countdown-show3">
+                      <span class="countdown-section">
+                        <span class="countdown-amount">{months}</span>
+                        <span class="countdown-period">Months</span>
+                      </span>
+                      <span class="countdown-section">
+                        <span class="countdown-amount">{hours}</span>
+                        <span class="countdown-period">Hours</span>
+                      </span>
+                      <span class="countdown-section">
+                        <span class="countdown-amount">{minutes}</span>
+                        <span class="countdown-period">Minutes</span>
+                      </span>
+                    </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+
+    this.months = 0;
+    this.hours = 0;
+    this.minutes = 0;
+
+    this.on('mount', function () {
+      $(this.refs.container).countdown(app.conference.date, function (event) {
+        var tmp = event.strftime('%-m:%-H:%-M').split(':')
+        this.update({
+          months: tmp[0],
+          hours: tmp[1],
+          minutes: tmp[2]
+        });
+      }.bind(this));
+    })
+  </script>
+</countdown>

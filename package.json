@@ -1,0 +1,38 @@
+{
+  "name": "phpdetroit.io",
+  "version": "1.0.0",
+  "description": "phpdetroit.io Website",
+  "repository": "git@github.com:franksworld/phpdetroit.io.git",
+  "author": "Frank Laszlo <frank@franksworld.org>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "grunt dev",
+    "dist": "grunt dist",
+    "lint": "eslint --ext .js,.es6,.html src/*"
+  },
+  "dependencies": {
+    "bootstrap": "3.3.5",
+    "ionicons": "ionic-team/ionicons#master",
+    "jquery": "^3.3.1",
+    "jquery-countdown": "^2.2.0",
+    "moment": "^2.20.1",
+    "nivo-lightbox": "laszlof/Nivo-Lightbox-jQuery#master",
+    "popper.js": "^1.12.9",
+    "riot": "^3.8.1",
+    "roboto-fontface": "^0.9.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-devserver": "^0.6.0",
+    "grunt-parallel": "^0.5.1",
+    "grunt-riot": "^0.1.8"
+  }
+}
