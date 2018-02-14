@@ -149,6 +149,15 @@ module.exports = function (grunt) {
       'riot:dist'
     ])
   })
+  grunt.registerTask('prod', function () {
+    grunt.task.run([
+      'less:fonts',
+      'copy:fonts',
+      'uglify:dist',
+      'cssmin:dist',
+      'riot:dist'
+    ])
+  })
   grunt.registerTask('dev', function () {
     grunt.task.run('parallel:dev')
   })
