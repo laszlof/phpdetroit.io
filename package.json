@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "grunt dev",
     "dist": "grunt dist",
-    "lint": "eslint --ext .js,.es6,.html src/*"
+    "lint": "eslint --ext .js,.es6,.html src/*",
+    "publish": "git pull && grunt prod"
   },
   "dependencies": {
     "bootstrap": "3.3.5",

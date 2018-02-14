@@ -5,13 +5,13 @@
         <h3>{dateFormat(app.conference.date, 'YYYY')}<br>{dateFormat(app.conference.date, 'MMMM Do')}</h3>
       </div>
       <div class="col-sm-3">
-        <h3>California<br>USA</h3>
+        <h3>{app.conference.location.state}<br>{app.conference.location.country}</h3>
       </div>
       <div class="col-sm-3">
-        <h3>150<br>Tickets</h3>
+        <h3>{app.conference.tickets}<br>Tickets</h3>
       </div>
       <div class="col-sm-3">
-        <h3>06<br>Speakers</h3>
+        <h3>{app.speakers.length}<br>Speakers</h3>
       </div>
     </div><!-- row -->
   </div><!-- container -->
