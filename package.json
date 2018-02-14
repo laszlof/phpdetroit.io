@@ -9,7 +9,7 @@
     "dev": "grunt dev",
     "dist": "grunt dist",
     "lint": "eslint --ext .js,.es6,.html src/*",
-    "publish": "git pull && grunt prod"
+    "publish": "git pull && yarn && grunt prod"
   },
   "dependencies": {
     "bootstrap": "3.3.5",
