@@ -3,7 +3,7 @@
   "plugins": ["riot"],
   "rules" : {
     "max-len": [2, {"code": 120}],
-    "semi": [2, "never"],
+    "semi": [0],
     "no-param-reassign": [0],
     "no-unused-vars": [2, {"args": "after-used", "argsIgnorePattern": "^_"}],
     "prefer-const": [0]
@@ -14,6 +14,7 @@
     "window": true,
     "moment": true,
     "$": true,
+    "jQuery": true,
     "app": true
   },
   "env": {

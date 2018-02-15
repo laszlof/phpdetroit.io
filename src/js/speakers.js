@@ -89,4 +89,4 @@ app.speakers = [
       linkedin: 'https://linkedin.com/in/laszlof',
     },
   },
-]
+];
