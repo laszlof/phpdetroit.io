@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "grunt dev",
     "dist": "grunt dist",
-    "lint": "eslint --ext .js,.es6,.html src/*",
+    "test": "./node_modules/.bin/eslint --ext .js,.html Gruntfile.js src/* public/index.html; ./node_modules/.bin/htmlhint --config .htmlhintrc src/tags/*.html public/index.html",
     "publish": "git pull && yarn && grunt prod"
   },
   "dependencies": {
@@ -23,6 +23,10 @@
     "roboto-fontface": "^0.9.0"
   },
   "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-riot": "^0.1.7",
     "grunt": "^1.0.2",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
@@ -34,6 +38,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-devserver": "^0.6.0",
     "grunt-parallel": "^0.5.1",
-    "grunt-riot": "^0.1.8"
+    "grunt-riot": "^0.1.8",
+    "htmlhint": "^0.9.13"
   }
 }

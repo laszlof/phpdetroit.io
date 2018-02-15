@@ -1,20 +1,20 @@
-window.app = (function initApp (app) {
+window.app = (function initApp(app) {
   app = app || {}
   app.riot = riot
   riot.util.misc.extend(app, riot)
 
   app.conference = {
     date: 1533214800000,
-    name: 'PHPDetroit',
+    name: 'PHPDetroit Conference',
     location: {
       city: 'Detroit',
       state: 'Michigan',
       country: 'USA',
       address: '',
-      zip: ''
+      zip: '',
     },
-    tickets: 150
+    tickets: 150,
   }
 
   return app
-})(window.app)
+}(window.app))

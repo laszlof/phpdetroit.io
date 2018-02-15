@@ -1,6 +1,5 @@
-module.exports = function (grunt) {
-
-  var jsAssets = {
+module.exports = (grunt) => {
+  let jsAssets = {
     'public/assets/vendor.js': [
       'node_modules/jquery/dist/jquery.js',
       'node_modules/popper.js/dist/umd/popper.js',
@@ -8,26 +7,26 @@ module.exports = function (grunt) {
       'node_modules/jquery-countdown/dist/jquery.countdown.js',
       'node_modules/nivo-lightbox/nivo-lightbox.js',
       'node_modules/riot/riot.js',
-      'node_modules/moment/moment.js'
+      'node_modules/moment/moment.js',
     ],
     'public/assets/app.js': [
       'src/js/app.js',
       'src/js/speakers.js',
       'src/js/main.js',
-      'src/js/mixins/time.js'
-    ]
+      'src/js/mixins/time.js',
+    ],
   }
 
-  var cssAssets = {
+  let cssAssets = {
     'public/assets/vendor.css': [
       'node_modules/bootstrap/dist/css/bootstrap.css',
       'node_modules/ionicons/ionicons-compiled.css',
       'node_modules/nivo-lightbox/nivo-lightbox.css',
-      'node_modules/roboto-fontface/roboto-compiled.css'
+      'node_modules/roboto-fontface/roboto-compiled.css',
     ],
     'public/assets/app.css': [
-      'src/css/main.css'
-    ]
+      'src/css/main.css',
+    ],
   }
 
   grunt.loadNpmTasks('grunt-riot')
@@ -45,52 +44,51 @@ module.exports = function (grunt) {
     uglify: {
       options: {
         minimize: true,
-        compress: false
+        compress: false,
       },
       dist: {
-        files: jsAssets
-      }
+        files: jsAssets,
+      },
     },
     concat: {
       options: {
-        process: function (src, filepath) {
-          return '/** BEGIN FILE: ' + filepath + ' **/\n\n' + src + '\n/** END FILE: ' + filepath + ' **/\n'
-        }
+        process: (src, filepath) => `/** BEGIN FILE: ${filepath} **/\n\n${src}\n/** END FILE: ${filepath} **/\n`,
       },
       dist: {
-        files: jsAssets
-      }
+        files: jsAssets,
+      },
     },
     cssmin: {
       options: {
-        specialComments: 0
+        specialComments: 0,
       },
       dist: {
-        files: cssAssets
-      }
+        files: cssAssets,
+      },
     },
     riot: {
       options: {
-        concat: true
+        concat: true,
       },
       dist: {
         src: 'src/tags/*.html',
-        dest: 'public/assets/tags.js'
-      }
+        dest: 'public/assets/tags.js',
+      },
     },
     less: {
       fonts: {
         options: {
           modifyVars: {
             'roboto-font-path': '\'fonts\'',
-            'ionicons-font-path': '\'fonts\''
-          }
+            'ionicons-font-path': '\'fonts\'',
+          },
         },
         files: {
-          'node_modules/roboto-fontface/roboto-compiled.css': 'node_modules/roboto-fontface/css/roboto/less/roboto-fontface.less',
-          'node_modules/ionicons/ionicons-compiled.css': 'node_modules/ionicons/less/ionicons.less'
-        }
-      }
+          'node_modules/roboto-fontface/roboto-compiled.css':
+            'node_modules/roboto-fontface/css/roboto/less/roboto-fontface.less',
+          'node_modules/ionicons/ionicons-compiled.css': 'node_modules/ionicons/less/ionicons.less',
+        },
+      },
     },
     copy: {
       fonts: {
@@ -99,23 +97,23 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'node_modules/roboto-fontface/fonts',
             src: ['**'],
-            dest: 'public/assets/fonts'
+            dest: 'public/assets/fonts',
           },
           {
             expand: true,
             cwd: 'node_modules/ionicons/fonts',
             src: ['**'],
-            dest: 'public/assets/fonts'
-          }
-        ]
-      }
+            dest: 'public/assets/fonts',
+          },
+        ],
+      },
     },
     devserver: {
       server: {
         options: {
-          base: 'public'
-        }
-      }
+          base: 'public',
+        },
+      },
     },
     watch: {
       scripts: {
@@ -123,43 +121,43 @@ module.exports = function (grunt) {
           'src/js/*.js',
           'src/js/mixins/*.js',
           'src/css/*.css',
-          'src/tags/*.html'
+          'src/tags/*.html',
         ],
         tasks: ['dist'],
         options: {
-          spawn: false
-        }
-      }
+          spawn: false,
+        },
+      },
     },
     parallel: {
       dev: {
         tasks: [
           { grunt: true, args: ['devserver'] },
-          { grunt: true, args: ['watch'] }
-        ]
-      }
-    }
+          { grunt: true, args: ['watch'] },
+        ],
+      },
+    },
   })
 
-  grunt.registerTask('dist', function () {
+  grunt.registerTask('dist', () => {
     grunt.task.run([
       'less:fonts',
       'copy:fonts',
       'concat:dist',
       'cssmin:dist',
-      'riot:dist'
+      'riot:dist',
     ])
   })
-  grunt.registerTask('prod', function () {
+  grunt.registerTask('prod', () => {
     grunt.task.run([
       'less:fonts',
       'copy:fonts',
       'uglify:dist',
       'cssmin:dist',
-      'riot:dist'
+      'riot:dist',
     ])
   })
-  grunt.registerTask('dev', function () {
+  grunt.registerTask('dev', () => {
     grunt.task.run('parallel:dev')
   })
 }
