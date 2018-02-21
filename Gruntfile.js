@@ -44,7 +44,7 @@ module.exports = (grunt) => {
     uglify: {
       options: {
         minimize: true,
-        compress: false,
+        compress: true,
       },
       dist: {
         files: jsAssets,
