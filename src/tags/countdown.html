@@ -7,19 +7,23 @@
         </div>
         <div class="col-md-10">
           <div ref="container" class="is-countdown">
-            <span class="countdown-row countdown-show3">
-                        <span class="countdown-section">
-                          <span class="countdown-amount">{months}</span>
-            <span class="countdown-period">Months</span>
-            </span>
-            <span class="countdown-section">
-                          <span class="countdown-amount">{hours}</span>
-            <span class="countdown-period">Hours</span>
-            </span>
-            <span class="countdown-section">
-                          <span class="countdown-amount">{minutes}</span>
-            <span class="countdown-period">Minutes</span>
-            </span>
+            <span class="countdown-row countdown-show4">
+              <span class="countdown-section">
+                <span class="countdown-amount">{months}</span>
+                <span class="countdown-period">{(months === '1') ? 'Month' : 'Months'}</span>
+              </span>
+              <span class="countdown-section">
+                <span class="countdown-amount">{days}</span>
+                <span class="countdown-period">{(days === '1' ? 'Day' : 'Days'}</span>
+              </span>
+              <span class="countdown-section">
+                <span class="countdown-amount">{hours}</span>
+                <span class="countdown-period">{(hours === '1' ? 'Hour' : 'Hours'}</span>
+              </span>
+              <span class="countdown-section">
+                <span class="countdown-amount">{minutes}</span>
+                <span class="countdown-period">{(minutes === '1' ? 'Minute' : Minutes}</span>
+              </span>
             </span>
           </div>
         </div>
@@ -29,17 +33,19 @@
 
   <script type="text/javascript">
     this.months = 0
+    this.days = 0;
     this.hours = 0
     this.minutes = 0
     let tag = this
 
     tag.on('mount', () => {
       $(tag.refs.container).countdown(app.conference.date, (event) => {
-        let tmp = event.strftime('%-m:%-H:%-M').split(':')
+        let tmp = event.strftime('%-m:%-d:%-H:%-M').split(':')
         tag.update({
           months: tmp[0],
-          hours: tmp[1],
-          minutes: tmp[2],
+          days: tmp[1],
+          hours: tmp[2],
+          minutes: tmp[3],
         })
       })
     })
