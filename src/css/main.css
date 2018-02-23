@@ -623,15 +623,6 @@ a:focus, a:hover {
   letter-spacing: 1px;
 }
 
-.full-width:after {
-  position: absolute;
-  content: "\f3d8";
-  right: 0;
-  font-family: 'Ionicons';
-  color: #000;
-  transition: all 0.2s ease-in-out;
-}
-
 .collapsed>.full-width:after {
   -ms-transform: rotate(180deg);
   /* IE 9 */
@@ -675,8 +666,18 @@ a:focus, a:hover {
 }
 
 .schedule_item {
-  border-bottom: 1px solid #D8D8D8;
+  border: 1px solid #D8D8D8;
   padding-top: 10px;
+}
+
+.schedule_item.session {
+  background-color: #fff;
+}
+.schedule_item.break {
+  background-color: #93b0dc;
+}
+.schedule_item.keynote {
+  background-color: orange;
 }
 
 .panel-body {

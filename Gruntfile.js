@@ -12,6 +12,7 @@ module.exports = (grunt) => {
     'public/assets/app.js': [
       'src/js/app.js',
       'src/js/speakers.js',
+      'src/js/schedule.js',
       'src/js/main.js',
       'src/js/mixins/time.js',
     ],

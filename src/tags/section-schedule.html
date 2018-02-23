@@ -1,0 +1,45 @@
+<section-schedule>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="section-title">Events Schedule</h3>
+      </div>
+    </div>
+    <div class="outer-tabs">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs schedule_tabs" role="tablist">
+        <li role="presentation" each="{day, idx in app.schedule}" class="{idx === 0 ? 'active' : ''}">
+          <a href="#day{idx}" aria-controls="day{idx}" role="tab" data-toggle="tab">
+            {day.name}<br><span>{day.date}</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane {idx === 0 ? 'in active' : ''}" each="{day, idx in app.schedule}" id="day{idx}">
+          <div class="schedule_item {session.solo ? 'col-md-12' : 'col-md-6'} {session.type}" each="{session in day.sessions}">
+            <div class="panel-heading">
+              <div class="speakers">{session.speaker}</div>
+              <div class="time"><span class="ion-clock"></span> {session.start_time} - {session.end_time}</div>
+              <h4 class="panel-title">
+                <div class="schedule_expand">
+                  <div class="full-width">
+                    {session.name}
+                  </div>
+                </div>
+              </h4>
+            </div>
+            <div class="panel-body">
+              {session.description}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  </script>
+</section-schedule>

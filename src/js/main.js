@@ -1,12 +1,4 @@
 $(document).ready(() => {
-  $('.schedule_expand').on('click', (e) => {
-    e.preventDefault()
-    const targetContent = $(this).closest('.schedule_item').find('.panel-collapse')
-    targetContent.toggleClass('in')
-    $(this).toggleClass('collapsed')
-  })
-
-
   /*= ================================
      ||          Turn off Google Map zooming
      ================================== */
@@ -44,32 +36,8 @@ $(document).ready(() => {
     }, // Callback when the lightbox gallery goes to next item
     errorMessage: 'The requested content cannot be loaded. Please try again later.',
   })
-
-
-  if ($('.schedule_tabs').length) {
-    // $('.schedule_tabs a:first').click();
-  }
 })
 
 $(() => {
   $('[data-toggle="tooltip"]').tooltip()
-})
-
-/*
- * Change Navbar color while scrolling
- */
-
-
-function handleTopNavAnimation() {
-  const top = $(window).scrollTop()
-
-  if (top > 10) {
-    $('#site-nav').addClass('navbar-solid')
-  } else {
-    $('#site-nav').removeClass('navbar-solid')
-  }
-}
-
-$(window).scroll(() => {
-  handleTopNavAnimation()
-})
+});
