@@ -4,16 +4,21 @@ window.app = (function initApp(app) {
   riot.util.misc.extend(app, riot)
 
   app.conference = {
-    date: 1533214800000,
+    date: 1532606400000,
     name: 'PHPDetroit Conference',
     location: {
-      city: 'Detroit',
+      venue: 'Detroit Marriott Livonia',
+      city: 'Livonia',
       state: 'Michigan',
       country: 'USA',
-      address: '',
-      zip: '',
+      address: '17100 N. Laurel Park Dr.',
+      zip: '48152',
     },
-    tickets: 150,
+    tickets: 200,
+  }
+
+  app.social = {
+    twitter: 'https://twitter.com/phpdet',
   }
 
   return app
