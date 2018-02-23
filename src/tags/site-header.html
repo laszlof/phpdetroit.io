@@ -1,6 +1,6 @@
 <site-header>
   <div id="home"></div>
-  <nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
+  <nav id="site-nav" class="navbar navbar-fixed-top navbar-custom {top === false ? 'navbar-solid' : ''}">
     <div class="container">
       <div class="navbar-header">
         <!-- logo -->
@@ -39,5 +39,17 @@
 
   <script type="text/javascript">
     this.mixin('time')
+    this.top = true
+    let tag = this
+    /*
+     * Change Navbar color while scrolling
+     */
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        tag.update({ top: false })
+      } else {
+        tag.update({ top: true })
+      }
+    })
   </script>
 </site-header>

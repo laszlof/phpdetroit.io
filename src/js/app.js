@@ -1,5 +1,7 @@
 window.app = (function initApp(app) {
   app = app || {}
+  app.speakers = [];
+  app.schedule = [];
   app.riot = riot
   riot.util.misc.extend(app, riot)
 
