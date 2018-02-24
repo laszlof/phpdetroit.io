@@ -5,6 +5,12 @@
         <h3 class="section-title">Speakers</h3>
       </div>
     </div>
+    <div class="row text-center" if="{app.conference.cfp}">
+      <div class="col-md-12">
+        <h4>Now Accepting Speaker Proposals</h4>
+        <cfp-button/>
+      </div>
+    </div>
     <div class="row">
       <speaker each="{speaker in app.speakers}" speaker="{speaker}" />
     </div>

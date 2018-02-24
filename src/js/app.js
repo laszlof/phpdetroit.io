@@ -1,4 +1,4 @@
-window.app = (function initApp(app) {
+window.app = ((app) => {
   app = app || {}
   app.speakers = [];
   app.schedule = [];
@@ -7,6 +7,7 @@ window.app = (function initApp(app) {
 
   app.conference = {
     date: 1532606400000,
+    cfp: true,
     name: 'PHPDetroit Conference',
     location: {
       venue: 'Detroit Marriott Livonia',
@@ -24,4 +25,4 @@ window.app = (function initApp(app) {
   }
 
   return app
-}(window.app))
+})(window.app)
