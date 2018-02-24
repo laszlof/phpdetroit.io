@@ -4,7 +4,7 @@ module.exports = (grunt) => {
       'node_modules/jquery/dist/jquery.js',
       'node_modules/popper.js/dist/umd/popper.js',
       'node_modules/bootstrap/dist/js/bootstrap.js',
-      'node_modules/jquery-countdown/dist/jquery.countdown.js',
+      'node_modules/countdown/countdown.js',
       'node_modules/riot/riot.js',
       'node_modules/moment/moment.js',
       'node_modules/smooth-scroll/dist/js/smooth-scroll.js',

@@ -34,14 +34,18 @@
     let tag = this
 
     tag.on('mount', () => {
-      $(tag.refs.container).countdown(app.conference.date, (event) => {
-        let tmp = event.strftime('%-m:%-d:%-H').split(':')
+      let timerCallback = () => {
+        let timespan = countdown(app.conference.date)
         tag.update({
-          months: tmp[0],
-          days: tmp[1],
-          hours: tmp[2],
+          months: timespan.months,
+          days: timespan.days,
+          hours: timespan.hours,
         })
-      })
+      }
+
+      timerCallback()
+
+      setTimeout(timerCallback, 10000)
     })
   </script>
 </countdown>
