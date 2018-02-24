@@ -14,4 +14,11 @@
       </div>
     </div>
   </footer>
+
+  <script type="text/javascript">
+    this.on('mount', () => {
+      let scroll = new SmoothScroll('a[href*="#"]')
+      scroll.init('a[href*="#"]')
+    })
+  </script>
 </site-footer>
