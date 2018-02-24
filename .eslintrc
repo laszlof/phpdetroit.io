@@ -16,7 +16,8 @@
     "$": true,
     "jQuery": true,
     "app": true,
-    "SmoothScroll": true
+    "SmoothScroll": true,
+    "countdown": true
   },
   "env": {
     "browser": true

@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "bootstrap": "3.3.5",
+    "countdown": "^2.6.0",
     "ionicons": "ionic-team/ionicons#master",
     "jquery": "^3.3.1",
-    "jquery-countdown": "^2.2.0",
     "moment": "^2.20.1",
     "popper.js": "^1.12.9",
     "riot": "^3.8.1",
