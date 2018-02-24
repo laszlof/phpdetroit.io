@@ -5,15 +5,14 @@ module.exports = (grunt) => {
       'node_modules/popper.js/dist/umd/popper.js',
       'node_modules/bootstrap/dist/js/bootstrap.js',
       'node_modules/jquery-countdown/dist/jquery.countdown.js',
-      'node_modules/nivo-lightbox/nivo-lightbox.js',
       'node_modules/riot/riot.js',
       'node_modules/moment/moment.js',
+      'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
     ],
     'public/assets/app.js': [
       'src/js/app.js',
       'src/js/speakers.js',
       'src/js/schedule.js',
-      'src/js/main.js',
       'src/js/mixins/time.js',
     ],
   }
@@ -22,7 +21,6 @@ module.exports = (grunt) => {
     'public/assets/vendor.css': [
       'node_modules/bootstrap/dist/css/bootstrap.css',
       'node_modules/ionicons/ionicons-compiled.css',
-      'node_modules/nivo-lightbox/nivo-lightbox.css',
       'node_modules/roboto-fontface/roboto-compiled.css',
     ],
     'public/assets/app.css': [

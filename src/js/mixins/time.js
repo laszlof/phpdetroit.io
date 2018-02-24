@@ -1,4 +1,4 @@
-(function timeMixin() {
+(() => {
   const mixin = {
     timeSince(timestamp) {
       return moment.unix(timestamp / 1000).fromNow()
@@ -14,4 +14,4 @@
   }
 
   app.mixin('time', mixin)
-}())
+})()

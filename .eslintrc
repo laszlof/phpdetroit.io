@@ -15,7 +15,8 @@
     "moment": true,
     "$": true,
     "jQuery": true,
-    "app": true
+    "app": true,
+    "SmoothScroll": true
   },
   "env": {
     "browser": true

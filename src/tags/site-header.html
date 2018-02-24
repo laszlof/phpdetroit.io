@@ -2,36 +2,39 @@
   <div id="home"></div>
   <nav id="site-nav" class="navbar navbar-fixed-top navbar-custom {top === false ? 'navbar-solid' : ''}">
     <div class="container">
-      <div class="navbar-header">
-        <!-- logo -->
-        <div class="site-branding">
-          <a class="logo" href="#home">
-            <!-- logo image  -->
-            <img src="assets/images/logo.svg" width="100px" />
-            <span>Conference {dateFormat(app.conference.date, 'Y')}</span>
-          </a>
-        </div>
+      <div class="row">
+        <div class="col-md-4 navbar-header">
+          <!-- logo -->
+          <div class="site-branding">
+            <a class="logo" href="#home">
+              <!-- logo image  -->
+              <img src="assets/images/logo.svg" width="100px" />
+              <span>Conference {dateFormat(app.conference.date, 'Y')}</span>
+            </a>
+          </div>
 
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <!-- /.navbar-header -->
-      <div class="collapse navbar-collapse" id="navbar-items">
-        <ul class="nav navbar-nav navbar-right">
-          <!-- navigation menu -->
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#partner">Partner</a></li>
-          <li><a href="#sponsorship">Sponsorship</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#photos">Photos</a></li>
-        </ul>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- /.navbar-header -->
+        <div class="col-md-8 collapse navbar-collapse" id="navbar-items">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- navigation menu -->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#registration">Register</a></li>
+            <li><a href="#coc">Code of Conduct</a></li>
+            <li><a href="#sponsorship">Sponsorship</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- /.container -->

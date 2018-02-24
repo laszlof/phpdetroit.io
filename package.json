@@ -17,10 +17,10 @@
     "jquery": "^3.3.1",
     "jquery-countdown": "^2.2.0",
     "moment": "^2.20.1",
-    "nivo-lightbox": "laszlof/Nivo-Lightbox-jQuery#master",
     "popper.js": "^1.12.9",
     "riot": "^3.8.1",
-    "roboto-fontface": "^0.9.0"
+    "roboto-fontface": "^0.9.0",
+    "smooth-scroll": "^12.1.5"
   },
   "devDependencies": {
     "eslint": "^4.17.0",

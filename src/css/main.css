@@ -345,7 +345,7 @@ ul li {
 
 .site-branding .logo {
   color: #93b0dc;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 700;
   margin-right: 5px;
   letter-spacing: 3px;
@@ -354,15 +354,12 @@ ul li {
 }
 
 .site-branding .logo span {
-  position: absolute;
-  bottom: 52px;
   padding-left: 10px;
   -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
 }
 
 .navbar-solid .site-branding .logo span {
-  bottom: 40px;
   -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
 }
@@ -673,9 +670,11 @@ a:focus, a:hover {
 .schedule_item.session {
   background-color: #fff;
 }
+
 .schedule_item.break {
   background-color: #93b0dc;
 }
+
 .schedule_item.keynote {
   background-color: orange;
 }
