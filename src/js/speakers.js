@@ -6,6 +6,7 @@ app.speakers = [
   //   social: {
   //     twitter: 'https://twitter.com/FrankLaszlo',
   //     linkedin: 'https://linkedin.com/in/laszlof',
+  //     joindin: 'https://joind.in/speaker'
   //   },
   // },
 ];

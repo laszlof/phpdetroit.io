@@ -76,6 +76,11 @@ ul li {
   font-size: 1.5em;
 }
 
+.social-block li a img {
+  width: 23px;
+  vertical-align: top;
+}
+
 .social-block li a:hover, .social-block li a:focus {
   color: #000;
 }
