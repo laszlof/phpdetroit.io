@@ -9,16 +9,16 @@
 
       <!-- Nav tabs -->
       <ul class="nav nav-tabs schedule_tabs" role="tablist">
-        <li role="presentation" each="{day, idx in app.schedule}" class="{idx === 0 ? 'active' : ''}">
-          <a href="#day{idx}" aria-controls="day{idx}" role="tab" data-toggle="tab">
+        <li role="presentation" each="{day, idx in app.schedule}" class="{active: idx === 0}">
+          <a href="#tab-content" aria-controls="day{idx}" role="tab" onclick="{tab.onClick}">
             {day.name}<br><span>{day.date}</span>
           </a>
         </li>
       </ul>
 
       <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane {idx === 0 ? 'in active' : ''}" each="{day, idx in app.schedule}" id="day{idx}">
+      <div class="tab-content" id="tab-content">
+        <div role="tabpanel" class="tab-pane {active: idx === 0}" each="{day, idx in app.schedule}" data-tab-id="day{idx}">
           <div class="schedule_item {session.solo ? 'col-md-12' : 'col-md-6'} {session.type}" each="{session in day.sessions}">
             <div class="panel-heading">
               <div class="speakers">{session.speaker}</div>
@@ -41,5 +41,38 @@
   </div>
 
   <script type="text/javascript">
+    let tag = this
+
+    this.tab = {
+      onClick: (event) => {
+        event.preventDefault()
+        event.preventUpdate = true
+
+        this.tab.clear()
+        this.tab.show(event.target)
+      },
+      clear: () => {
+        tag.root.querySelectorAll('[role="presentation"], [role="tab"], [role="tabpanel"]')
+          .forEach((element) => {
+            element.classList.remove('active')
+
+            if (element.hasAttribute('aria-expanded')) {
+              element.setAttribute('aria-expanded', false)
+            }
+            if (element.hasAttribute('aria-selected')) {
+              element.setAttribute('aria-selected', false)
+            }
+          })
+      },
+      show: (tab) => {
+        tab = $(tab).closest('[role="tab"]')[0]
+        let pane = tag.root.querySelector(`[data-tab-id="${tab.getAttribute('aria-controls')}"]`)
+
+        pane.classList.add('active')
+        pane.setAttribute('aria-expanded', true)
+
+        $(tab).closest('[role="presentation"]')[0].setAttribute('aria-selected', true)
+      },
+    }
   </script>
 </section-schedule>
