@@ -20,7 +20,7 @@ module.exports = (grunt) => {
   let cssAssets = {
     'public/assets/vendor.css': [
       'node_modules/bootstrap/dist/css/bootstrap.css',
-      'node_modules/ionicons/ionicons-compiled.css',
+      'node_modules/font-awesome/css/font-awesome-compiled.css',
       'node_modules/roboto-fontface/roboto-compiled.css',
     ],
     'public/assets/app.css': [
@@ -30,6 +30,7 @@ module.exports = (grunt) => {
 
   grunt.loadNpmTasks('grunt-riot')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
+  grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-uglify-es')
   grunt.loadNpmTasks('grunt-contrib-concat')
@@ -79,13 +80,14 @@ module.exports = (grunt) => {
         options: {
           modifyVars: {
             'roboto-font-path': '\'fonts\'',
-            'ionicons-font-path': '\'fonts\'',
+            'fa-font-path': '\'fonts\'',
           },
         },
         files: {
           'node_modules/roboto-fontface/roboto-compiled.css':
             'node_modules/roboto-fontface/css/roboto/less/roboto-fontface.less',
-          'node_modules/ionicons/ionicons-compiled.css': 'node_modules/ionicons/less/ionicons.less',
+          'node_modules/font-awesome/css/font-awesome-compiled.css':
+            'node_modules/font-awesome/less/font-awesome.less',
         },
       },
     },
@@ -100,12 +102,15 @@ module.exports = (grunt) => {
           },
           {
             expand: true,
-            cwd: 'node_modules/ionicons/fonts',
+            cwd: 'node_modules/font-awesome/fonts',
             src: ['**'],
             dest: 'public/assets/fonts',
           },
         ],
       },
+    },
+    clean: {
+      fonts: ['public/assets/fonts/**'],
     },
     devserver: {
       server: {
@@ -141,6 +146,7 @@ module.exports = (grunt) => {
   grunt.registerTask('dist', () => {
     grunt.task.run([
       'less:fonts',
+      'clean:fonts',
       'copy:fonts',
       'concat:dist',
       'cssmin:dist',
@@ -150,6 +156,7 @@ module.exports = (grunt) => {
   grunt.registerTask('prod', () => {
     grunt.task.run([
       'less:fonts',
+      'clean:fonts',
       'copy:fonts',
       'uglify:dist',
       'cssmin:dist',

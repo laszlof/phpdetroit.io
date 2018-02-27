@@ -14,7 +14,7 @@
   "dependencies": {
     "bootstrap": "3.3.5",
     "countdown": "^2.6.0",
-    "ionicons": "ionic-team/ionicons#master",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "moment": "^2.20.1",
     "popper.js": "^1.12.9",
@@ -28,6 +28,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-riot": "^0.1.7",
     "grunt": "^1.0.2",
+    "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^2.2.1",

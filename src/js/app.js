@@ -22,6 +22,7 @@ window.app = ((app) => {
 
   app.social = {
     twitter: 'https://twitter.com/phpdet',
+    slack: 'https://phpdetroit-slack.herokuapp.com/',
   }
 
   return app
