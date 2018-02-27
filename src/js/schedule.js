@@ -4,16 +4,6 @@ app.schedule = [
     date: 'Thursday, July 26th',
     sessions: [
       {
-        solo: true,
-        type: 'break',
-        name: 'Breakfast',
-        description: 'Join us for some food!',
-        sponsor: 'TBD',
-        start_time: '6:30am',
-        end_time: '8:00am',
-        room: 'Salon B + Ontario',
-      },
-      {
         track: [1],
         type: 'tutorial',
         name: 'Tutorial Session',
@@ -64,15 +54,6 @@ app.schedule = [
     name: 'Conference Day 1',
     date: 'Friday, July 27th',
     sessions: [
-      {
-        solo: true,
-        type: 'break',
-        name: 'Breakfast',
-        sponsor: 'TBD',
-        start_time: '7:30am',
-        end_time: '8:30am',
-        room: 'Salon A/B + Ontario',
-      },
       {
         solo: true,
         type: 'keynote',
@@ -206,7 +187,7 @@ app.schedule = [
         sponsor: 'TBD',
         start_time: '7:00pm',
         end_time: '9:00pm',
-        room: 'Salon A/B',
+        room: 'TBD',
       },
     ],
   },
@@ -214,15 +195,6 @@ app.schedule = [
     name: 'Conference Day 2',
     date: 'Saturday, July 28th',
     sessions: [
-      {
-        solo: true,
-        type: 'break',
-        name: 'Breakfast',
-        sponsor: 'TBD',
-        start_time: '7:30am',
-        end_time: '9:00am',
-        room: 'Salon A/B + Ontario',
-      },
       {
         track: [1],
         type: 'session',
