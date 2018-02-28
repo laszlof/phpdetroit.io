@@ -1,0 +1,23 @@
+<modal-window onclick="{handleClose}" onkeypress="{handleClose}">
+  <div class="modal-background"></div>
+  <section if="{contentTag}" data-is="{contentTag}" class="modal-content"></section>
+
+  <script type="text/javascript">
+    let tag = this
+
+    this.contentTag = null
+
+    this.open = () => {
+      document.body.classList.add('no-scroll')
+      tag.root.classList.add('open')
+    }
+    this.close = () => {
+      document.body.classList.remove('no-scroll')
+      tag.root.classList.remove('open')
+    }
+
+    this.handleClose = () => {
+      this.close()
+    }
+  </script>
+</modal-window>

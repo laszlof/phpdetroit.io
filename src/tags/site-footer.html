@@ -9,12 +9,17 @@
             <li><a href="{app.social.slack}"><i class="fa fa-slack"></i></a></li>
             <li><a href="{app.social.joindin}"><img src="/assets/images/joindin.png"/></a></li>
           </ul>
+          <p class="site-info"><a onclick="{showConduct}">Code of Conduct</a></p>
         </div>
       </div>
     </div>
   </footer>
 
   <script type="text/javascript">
+    this.showConduct = () => {
+      app.event.trigger('modal:show', { contentTag: 'section-coc' })
+    }
+
     this.on('mount', () => {
       let scroll = new SmoothScroll('a[href*="#"]')
       scroll.init('a[href*="#"]')
