@@ -11,6 +11,7 @@ app.schedule = [
         start_time: '8:00am',
         end_time: '12:00pm',
         room: 'Salon C',
+        description: '',
       },
       {
         track: [2],
