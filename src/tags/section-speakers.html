@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="row">
-      <speaker each="{speaker in app.speakers}" speaker="{speaker}" />
+      <speaker each="{speaker, ident in app.speakers}" speaker="{speaker}" id="speaker-{ident}"/>
     </div>
   </div>
 </section-speakers>
