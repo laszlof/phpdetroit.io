@@ -7,10 +7,12 @@ window.app = ((app) => {
 
   app.conference = {
     date: 1532606400000,
-    cfp: true,
+    cfp: false,
     name: 'PHPDetroit Conference',
     location: {
+      url: 'http://www.marriott.com/hotels/travel/dtwli-detroit-marriott-livonia/',
       venue: 'Detroit Marriott Livonia',
+      phone: '+1 734-462-3100',
       city: 'Livonia',
       state: 'Michigan',
       country: 'USA',
@@ -24,6 +26,17 @@ window.app = ((app) => {
     twitter: 'https://twitter.com/phpdet',
     slack: 'https://phpdetroit-slack.herokuapp.com/',
     joindin: 'https://joind.in/event/phpdetroit-conference-2018',
+  }
+
+  app.getSpeaker = ident => app.speakers[ident] || {
+    name: 'TBD',
+    image: 'assets/images/speakers/placeholder.png',
+    title: '',
+    social: {
+      twitter: '',
+      linkedin: '',
+      joindin: '',
+    },
   }
 
   return app

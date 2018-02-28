@@ -21,7 +21,7 @@
         <div role="tabpanel" class="tab-pane {active: idx === 0}" each="{day, idx in app.schedule}" data-tab-id="day{idx}">
           <div class="schedule_item {session.solo ? 'col-md-12' : 'col-md-6'} {session.type}" each="{session in day.sessions}">
             <div class="panel-heading">
-              <div class="speakers">{app.speakers.get(session.speaker).name}</div>
+              <div class="speakers">{app.getSpeaker(session.speaker).name}</div>
               <div class="time"><span class="fa fa-clock-o"></span> {session.start_time} - {session.end_time} | {session.room}</div>
               <h4 class="panel-title">
                 <div class="schedule_expand">
