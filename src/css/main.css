@@ -996,11 +996,43 @@ Sponsorship
 }
 
 .sponsors img {
-  border: 1px solid #ddd;
-  width: 100%;
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin: 10px 0;
+}
+
+.sponsors .platinum img {
+  width: 50%;
+}
+
+.sponsors .gold {
+  border-right: 1px solid #ccc;
+}
+
+.sponsors .gold img {
+  width: 60%;
+}
+
+.sponsors .silver {
+  border-right: 1px solid #ccc;
+}
+
+.sponsors .silver img {
+  width: 45%;
+}
+
+.sponsors .bronze img {
+  width: 45%;
+}
+
+.sponsors .community {
+  border-right: 1px solid #ccc;
+}
+
+.sponsors .community img {
+  width: 24%;
+}
+
+.sponsors .inkind img {
+  width: 24%;
 }
 
 .sponsor-caption {
