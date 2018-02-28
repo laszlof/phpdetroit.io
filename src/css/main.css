@@ -89,6 +89,11 @@ ul li {
   outline: none;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 .btn {
   border: 0;
   border-radius: 0;
@@ -929,12 +934,13 @@ address {
 }
 
 .site-footer .site-info {
-  font-weight: 400;
+  font-weight: 400;s
   margin-bottom: 10px;
   letter-spacing: 2.3px;
 }
 
 .site-footer .site-info a {
+  cursor: pointer;
   color: #fff;
 }
 
