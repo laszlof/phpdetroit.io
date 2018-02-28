@@ -24,6 +24,7 @@ window.app = ((app) => {
 
   app.social = {
     twitter: 'https://twitter.com/phpdet',
+    facebook: 'https://www.facebook.com/detconf',
     slack: 'https://phpdetroit-slack.herokuapp.com/',
     joindin: 'https://joind.in/event/phpdetroit-conference-2018',
   }
