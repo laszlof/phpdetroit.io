@@ -29,7 +29,7 @@ app.schedule = [
         speaker: 'TBD',
         start_time: '12:00pm',
         end_time: '1:00pm',
-        room: 'Salon B + Ontario',
+        room: 'Salon B + Michigan',
       },
       {
         track: [1],
@@ -107,7 +107,7 @@ app.schedule = [
         sponsor: 'TBD',
         start_time: '12:00pm',
         end_time: '1:00pm',
-        room: 'Salon A/B + Ontario',
+        room: 'Salon A/B + Michigan',
       },
       {
         track: [1],
@@ -257,7 +257,7 @@ app.schedule = [
         sponsor: 'TBD',
         start_time: '12:00pm',
         end_time: '1:30pm',
-        room: 'Salon A/B + Ontario',
+        room: 'Salon A/B + Michigan',
       },
       {
         track: [1],

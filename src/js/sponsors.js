@@ -3,7 +3,7 @@ app.sponsors = {
     // {
     //   name: 'Thermo',
     //   url: 'https://thermo.io',
-    //   logo: '/assets/images/sponsor/thermo_logo.svg',
+    //   logo: '/assets/images/sponsors/thermo_logo.svg',
     // },
   ],
   gold: [
@@ -13,7 +13,7 @@ app.sponsors = {
     // {
     //   name: 'Open Source Mental Illness',
     //   url: 'https://osmihelp.org',
-    //   logo: '/assets/images/sponsor/osmi_logo.svg',
+    //   logo: '/assets/images/sponsors/osmi_logo.svg',
     // },
   ],
   bronze: [

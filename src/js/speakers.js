@@ -10,14 +10,3 @@ app.speakers = {
   //   },
   // },
 };
-
-app.speakers.get = ident => app.speakers[ident] || {
-  name: 'TBD',
-  image: 'assets/images/speakers/placeholder.png',
-  title: '',
-  social: {
-    twitter: '',
-    linkedin: '',
-    joindin: '',
-  },
-};

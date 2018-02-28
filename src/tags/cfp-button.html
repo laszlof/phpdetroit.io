@@ -1,3 +1,4 @@
 <cfp-button>
-  <a class="btn btn-blue btn-lg" href="https://cfp.phpdetroit.io">Call for Papers</a>
+  <a if="{app.conference.cfp === true}" class="btn btn-blue btn-lg" href="https://cfp.phpdetroit.io">Call for Papers</a>
+  <h4 if="{app.conference.cfp === false}">Call for Papers Opens March 1st</h4>
 </cfp-button>
