@@ -10,11 +10,11 @@ app.sponsors = {
 
   ],
   silver: [
-    // {
-    //   name: 'Open Source Mental Illness',
-    //   url: 'https://osmihelp.org',
-    //   logo: '/assets/images/sponsors/osmi_logo.svg',
-    // },
+    {
+      name: 'Yochana IT Solutions',
+      url: 'http://yochanait.com',
+      logo: 'assets/images/sponsors/yochana.png',
+    },
   ],
   bronze: [
 
