@@ -723,99 +723,6 @@ a:focus, a:hover {
  * 6.7 Section: Schedule
  */
 
-.partner {
-  background-color: #f8f8f8;
-}
-
-.partner .partner-box {
-  display: block;
-  opacity: 0.3;
-  height: 150px;
-  width: 150px;
-  margin: 25px auto;
-  -webkit-transition: 0.5s all linear;
-  transition: 0.5s all linear;
-}
-
-.partner .partner-box:hover {
-  opacity: 1;
-}
-
-.partner .partner-box-1 {
-  background: url(/assets/images/partner/partner-1.png) no-repeat center center/contain;
-}
-
-.partner .partner-box-2 {
-  background: url(/assets/images/partner/partner-2.png) no-repeat center center/contain;
-}
-
-.partner .partner-box-3 {
-  background: url(/assets/images/partner/partner-3.png) no-repeat center center/contain;
-}
-
-.partner .partner-box-4 {
-  background: url(/assets/images/partner/partner-4.png) no-repeat center center/contain;
-}
-
-.partner .partner-box-5 {
-  background: url(/assets/images/partner/partner-5.png) no-repeat center center/contain;
-}
-
-.partner .partner-box-6 {
-  background: url(/assets/images/partner/partner-6.png) no-repeat center center/contain;
-}
-
-.partner .partner-box-7 {
-  background: url(/assets/images/partner/partner-7.png) no-repeat center center/contain;
-}
-
-.partner .partner-box-8 {
-  background: url(/assets/images/partner/partner-8.png) no-repeat center center/contain;
-}
-
-/*
- * 6.8 Section: FAQ
- */
-
-.faq .panel-heading {
-  cursor: pointer;
-}
-
-.faq .faq-toggle.collapsed::before {
-  font-family: "Ionicons";
-  content: "\f218";
-  -webkit-transition: 0.5s linear ease-out;
-  transition: 0.5s linear ease-out;
-  position: absolute;
-  left: 15px;
-}
-
-.faq .faq-toggle::before {
-  position: absolute;
-  left: 15px;
-  font-family: "Ionicons";
-  content: "\f209";
-}
-
-.faq .panel-group .panel+.panel {
-  margin-top: 15px;
-}
-
-.faq .panel-default>.panel-heading {
-  color: #FFF;
-  background-color: #000000;
-  border-color: #000;
-  border-radius: 0;
-  padding: 0;
-}
-
-.faq .panel-default>.panel-heading a {
-  position: relative;
-  display: block;
-  text-decoration: none;
-  padding: 15px 15px 15px 35px;
-}
-
 /*
  * 6.9 Section: photos
  */
@@ -1003,36 +910,24 @@ Sponsorship
   width: 50%;
 }
 
-.sponsors .gold {
-  border-right: 1px solid #ccc;
-}
-
 .sponsors .gold img {
   width: 60%;
 }
 
-.sponsors .silver {
-  border-right: 1px solid #ccc;
-}
-
 .sponsors .silver img {
-  width: 45%;
+  width: 60%;
 }
 
 .sponsors .bronze img {
-  width: 45%;
-}
-
-.sponsors .community {
-  border-right: 1px solid #ccc;
+  width: 60%;
 }
 
 .sponsors .community img {
-  width: 24%;
+  width: 45%;
 }
 
 .sponsors .inkind img {
-  width: 24%;
+  width: 45%;
 }
 
 .sponsor-caption {
