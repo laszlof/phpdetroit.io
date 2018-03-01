@@ -7,7 +7,7 @@ window.app = ((app) => {
 
   app.conference = {
     date: 1532606400000,
-    cfp: false,
+    cfp: true,
     name: 'PHPDetroit Conference',
     location: {
       url: 'http://www.marriott.com/hotels/travel/dtwli-detroit-marriott-livonia/',
