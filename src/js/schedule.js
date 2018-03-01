@@ -61,7 +61,7 @@ app.schedule = [
         name: 'Welcome Keynote',
         speaker: 'TBD',
         start_time: '8:30am',
-        end_time: '10:00pm',
+        end_time: '10:00am',
         room: 'Salon A/B',
       },
       {
