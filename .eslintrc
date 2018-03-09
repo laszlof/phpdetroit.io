@@ -8,6 +8,7 @@
     "no-unused-vars": [2, {"args": "after-used", "argsIgnorePattern": "^_"}],
     "prefer-const": [0],
     "prefer-destructuring": [0],
+    "no-bitwise": [0]
   },
   "globals": {
     "riot": true,
