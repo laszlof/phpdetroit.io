@@ -9,16 +9,16 @@
           <div ref="container" class="is-countdown">
             <span class="countdown-row countdown-show3">
               <span class="countdown-section">
-                <span class="countdown-amount">{months}</span>
-                <span class="countdown-period">{(months === '1') ? 'Month' : 'Months'}</span>
+                <span class="countdown-amount">{timing.days}</span>
+                <span class="countdown-period">{(timing.days === 1) ? 'Day' : 'Days'}</span>
               </span>
               <span class="countdown-section">
-                <span class="countdown-amount">{days}</span>
-                <span class="countdown-period">{(days === '1') ? 'Day' : 'Days'}</span>
+                <span class="countdown-amount">{timing.hours}</span>
+                <span class="countdown-period">{(timing.hours === 1) ? 'Hour' : 'Hours'}</span>
               </span>
               <span class="countdown-section">
-                <span class="countdown-amount">{hours}</span>
-                <span class="countdown-period">{(hours === '1') ? 'Hour' : 'Hours'}</span>
+                <span class="countdown-amount">{timing.minutes}</span>
+                <span class="countdown-period">{(timing.minutes === 1) ? 'Minute' : 'Minutes'}</span>
               </span>
             </span>
           </div>
@@ -28,24 +28,26 @@
   </div>
 
   <script type="text/javascript">
-    this.months = 0
-    this.days = 0;
-    this.hours = 0
+    this.timing = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+    }
     let tag = this
-
     tag.on('mount', () => {
-      let timerCallback = () => {
-        let timespan = countdown(app.conference.date)
-        tag.update({
-          months: timespan.months,
-          days: timespan.days,
-          hours: timespan.hours,
-        })
-      }
-
-      timerCallback()
-
-      setTimeout(timerCallback, 10000)
+      countdown(
+        app.conference.date,
+        (ts) => {
+          tag.update({
+            timing: {
+              days: ts.days,
+              hours: ts.hours,
+              minutes: ts.minutes,
+            },
+          })
+        },
+        countdown.DAYS | countdown.HOURS | countdown.MINUTES
+      )
     })
   </script>
 </countdown>
