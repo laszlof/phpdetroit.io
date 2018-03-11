@@ -28,6 +28,10 @@ app.sponsors = {
 
   ],
   inkind: [
-
+    {
+      name: 'JetBrains',
+      url: 'https://www.jetbrains.com',
+      logo: 'assets/images/sponsors/jetbrains.svg',
+    },
   ],
 };
