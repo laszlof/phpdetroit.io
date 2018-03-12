@@ -16,6 +16,11 @@ app.sponsors = {
       logo: 'assets/images/sponsors/yochana.png',
     },
     {
+      name: 'KNP University',
+      url: 'https://knpuniversity.com/',
+      logo: 'assets/images/sponsors/knpu-logo.svg',
+    },
+    {
       name: 'Open Source Mental Illness',
       url: 'https://osmihelp.org',
       logo: 'assets/images/sponsors/osmi_logo.svg',
