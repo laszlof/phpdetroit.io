@@ -11,7 +11,9 @@
             <br>
             {app.conference.location.city}, {app.conference.location.state} {app.conference.location.zip}
             <br>
-            {app.conference.location.phone}
+            <a href="tel:{app.conference.location.phone}">{app.conference.location.phone}</a>
+            <br>
+            <a class="btn btn-blue btn-lg" href="{app.conference.location.book_url}">Make Reservation</a>
           </p>
         </address>
       </div>
