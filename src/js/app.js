@@ -11,6 +11,7 @@ window.app = ((app) => {
     name: 'PHPDetroit Conference',
     location: {
       url: 'http://www.marriott.com/hotels/travel/dtwli-detroit-marriott-livonia/',
+      book_url: 'http://bit.ly/2GxpX4T',
       venue: 'Detroit Marriott Livonia',
       phone: '+1 734-462-3100',
       city: 'Livonia',
