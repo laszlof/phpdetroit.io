@@ -21,7 +21,7 @@ module.exports = (grunt) => {
 
   let cssAssets = {
     'public/assets/vendor.css': [
-      'node_modules/bootstrap/dist/css/bootstrap.css',
+      'node_modules/bootstrap/bootstrap-compiled.css',
       'node_modules/font-awesome/css/font-awesome-compiled.css',
       'node_modules/roboto-fontface/roboto-compiled.css',
     ],
@@ -101,6 +101,7 @@ module.exports = (grunt) => {
           modifyVars: {
             'roboto-font-path': '\'fonts\'',
             'fa-font-path': '\'fonts\'',
+            'icon-font-path': '\'fonts\'',
           },
         },
         files: {
@@ -108,6 +109,8 @@ module.exports = (grunt) => {
             'node_modules/roboto-fontface/css/roboto/less/roboto-fontface.less',
           'node_modules/font-awesome/css/font-awesome-compiled.css':
             'node_modules/font-awesome/less/font-awesome.less',
+          'node_modules/bootstrap/bootstrap-compiled.css':
+            'node_modules/bootstrap/less/bootstrap.less',
         },
       },
     },
