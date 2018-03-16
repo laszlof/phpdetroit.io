@@ -126,6 +126,12 @@ module.exports = (grunt) => {
             src: ['**'],
             dest: 'public/assets/fonts',
           },
+          {
+            expand: true,
+            cwd: 'node_modules/bootstrap/fonts',
+            src: ['**'],
+            dest: 'public/assets/fonts',
+          },
         ],
       },
     },
