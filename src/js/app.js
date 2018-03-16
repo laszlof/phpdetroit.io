@@ -44,7 +44,7 @@ window.app = ((app) => {
 
   app.route('*', (target) => {
     if (ga) {
-      ga('send', 'event', target, 'clicked')
+      ga('send', 'pageview', `/#${target}`)
     }
   })
 
