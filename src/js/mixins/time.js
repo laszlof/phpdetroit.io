@@ -14,4 +14,4 @@
   }
 
   app.mixin('time', mixin)
-})()
+})();

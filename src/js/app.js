@@ -5,6 +5,7 @@ window.app = ((app) => {
   app.riot = riot
   riot.util.misc.extend(app, riot)
 
+  app.route = route;
   app.conference = {
     date: 1532606400000,
     cfp: true,
@@ -41,5 +42,13 @@ window.app = ((app) => {
     },
   }
 
+  app.route('*', (target) => {
+    if (ga) {
+      ga('send', 'event', target, 'clicked')
+    }
+  })
+
+  app.route.start()
+
   return app
-})(window.app)
+})(window.app);

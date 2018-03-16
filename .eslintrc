@@ -12,6 +12,7 @@
   },
   "globals": {
     "riot": true,
+    "route": true,
     "opts": true,
     "window": true,
     "moment": true,
@@ -19,7 +20,8 @@
     "jQuery": true,
     "app": true,
     "SmoothScroll": true,
-    "countdown": true
+    "countdown": true,
+    "ga": true
   },
   "env": {
     "browser": true
