@@ -1,6 +1,6 @@
 module.exports = (grunt) => {
   let jsAssets = {
-    'public/assets/vendor.js': [
+    '.tmp/vendor.js': [
       'node_modules/jquery/dist/jquery.js',
       'node_modules/popper.js/dist/umd/popper.js',
       'node_modules/bootstrap/dist/js/bootstrap.js',
@@ -10,7 +10,7 @@ module.exports = (grunt) => {
       'node_modules/moment/moment.js',
       'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
     ],
-    'public/assets/app.js': [
+    '.tmp/app.js': [
       'src/js/app.js',
       'src/js/mixins/time.js',
       'src/js/speakers.js',
@@ -34,7 +34,8 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-cssmin')
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-copy')
-  grunt.loadNpmTasks('grunt-contrib-uglify-es')
+  grunt.loadNpmTasks('grunt-contrib-uglify')
+  grunt.loadNpmTasks('grunt-babel')
   grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-devserver')
@@ -49,7 +50,24 @@ module.exports = (grunt) => {
         compress: true,
       },
       dist: {
-        files: jsAssets,
+        files: {
+          'public/assets/vendor.js': '.tmp/vendor.js',
+        },
+      },
+    },
+    babel: {
+      prod: {
+        options: {
+          presets: ['minify'],
+        },
+        files: {
+          'public/assets/app.js': '.tmp/app.js',
+        },
+      },
+      dev: {
+        files: {
+          'public/assets/app.js': '.tmp/app.js',
+        },
       },
     },
     concat: {
@@ -113,6 +131,7 @@ module.exports = (grunt) => {
     },
     clean: {
       fonts: ['public/assets/fonts/**'],
+      after: ['.tmp'],
     },
     devserver: {
       server: {
@@ -151,8 +170,11 @@ module.exports = (grunt) => {
       'clean:fonts',
       'copy:fonts',
       'concat:dist',
+      'babel:dev',
+      'uglify:dist',
       'cssmin:dist',
       'riot:dist',
+      'clean:after',
     ])
   })
   grunt.registerTask('prod', () => {
@@ -160,9 +182,12 @@ module.exports = (grunt) => {
       'less:fonts',
       'clean:fonts',
       'copy:fonts',
+      'concat:dist',
+      'babel:prod',
       'uglify:dist',
       'cssmin:dist',
       'riot:dist',
+      'clean:after',
     ])
   })
   grunt.registerTask('dev', () => {

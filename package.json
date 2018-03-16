@@ -24,6 +24,11 @@
     "smooth-scroll": "^12.1.5"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-plugin-uglify": "^1.0.2",
+    "babel-preset-minify": "^0.3.0",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
@@ -36,10 +41,11 @@
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-nodeunit": "^1.0.0",
-    "grunt-contrib-uglify-es": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
+    "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-devserver": "^0.6.0",
     "grunt-parallel": "^0.5.1",
+    "grunt-babel": "^7.0.0",
     "grunt-riot": "^0.1.8",
     "htmlhint": "^0.9.13"
   }
