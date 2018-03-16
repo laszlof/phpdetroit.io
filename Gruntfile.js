@@ -6,15 +6,16 @@ module.exports = (grunt) => {
       'node_modules/bootstrap/dist/js/bootstrap.js',
       'node_modules/countdown/countdown.js',
       'node_modules/riot/riot.js',
+      'node_modules/riot-route/dist/route.js',
       'node_modules/moment/moment.js',
       'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
     ],
     'public/assets/app.js': [
       'src/js/app.js',
+      'src/js/mixins/time.js',
       'src/js/speakers.js',
       'src/js/schedule.js',
       'src/js/sponsors.js',
-      'src/js/mixins/time.js',
     ],
   }
 
