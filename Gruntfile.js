@@ -54,6 +54,11 @@ module.exports = (grunt) => {
           'public/assets/vendor.js': '.tmp/vendor.js',
         },
       },
+      prod: {
+        files: {
+          'public/assets/tags.js': '.tmp/tags.js',
+        },
+      },
     },
     babel: {
       prod: {
@@ -93,6 +98,10 @@ module.exports = (grunt) => {
       dist: {
         src: 'src/tags/*.html',
         dest: 'public/assets/tags.js',
+      },
+      prod: {
+        src: 'src/tags/*.html',
+        dest: '.tmp/tags.js',
       },
     },
     less: {
@@ -193,9 +202,10 @@ module.exports = (grunt) => {
       'copy:fonts',
       'concat:dist',
       'babel:prod',
+      'riot:prod',
+      'uglify:prod',
       'uglify:dist',
       'cssmin:dist',
-      'riot:dist',
       'clean:after',
     ])
   })
