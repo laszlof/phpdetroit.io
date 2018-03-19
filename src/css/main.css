@@ -859,6 +859,10 @@ address {
   opacity: 0.8;
 }
 
+.site-footer #mc_embed_signup form {
+  padding-bottom: 50px;
+}
+
 /*Submisson form*/
 
 #submission section {
