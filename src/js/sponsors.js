@@ -25,6 +25,11 @@ app.sponsors = {
       url: 'https://osmihelp.org',
       logo: 'assets/images/sponsors/osmi_logo.svg',
     },
+    {
+      name: 'Barracuda Networks',
+      url: 'https://barracuda.com',
+      logo: 'assets/images/sponsors/barracuda.svg',
+    },
   ],
   bronze: [
 
