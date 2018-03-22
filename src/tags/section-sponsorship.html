@@ -9,30 +9,36 @@
       <div class="row">
         <div class="col-md-12 platinum">
           <h5 class="sponsor-caption">Platinum Sponsor</h5>
+          <p if="{! app.sponsors.platinum.length}"><strong>No Platinum Sponsors</strong></p>
           <a each="{sponsor in app.sponsors.platinum}" href="{sponsor.url}" target="_blank"><img src="{sponsor.logo}" title="{sponsor.name}"/></a>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 gold">
           <h5 class="sponsor-caption">Gold Sponsors</h5>
+          <p if="{! app.sponsors.gold.length}"><strong>No Gold Sponsors</strong></p>
           <a each="{sponsor in app.sponsors.gold}" href="{sponsor.url}" target="_blank"><img src="{sponsor.logo}" title="{sponsor.name}"/></a>
         </div>
         <div class="col-md-4 silver">
           <h5 class="sponsor-caption">Silver Sponsors</h5>
+          <p if="{! app.sponsors.silver.length}"><strong>No Silver Sponsors</strong></p>
           <a each="{sponsor in app.sponsors.silver}" href="{sponsor.url}" target="_blank"><img src="{sponsor.logo}" title="{sponsor.name}"/></a>
         </div>
         <div class="col-md-4 bronze">
           <h5 class="sponsor-caption">Bronze Sponsors</h5>
+          <p if="{! app.sponsors.bronze.length}"><strong>No Bronze Sponsors</strong></p>
           <a each="{sponsor in app.sponsors.bronze}" href="{sponsor.url}" target="_blank"><img src="{sponsor.logo}" title="{sponsor.name}"/></a>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 community">
           <h5 class="sponsor-caption">Community Sponsors</h5>
+          <p if="{! app.sponsors.community.length}"><strong>No Community Sponsors</strong></p>
           <a each="{sponsor in app.sponsors.community}" href="{sponsor.url}" target="_blank"><img src="{sponsor.logo}" title="{sponsor.name}"/></a>
         </div>
         <div class="col-md-6 inkind">
           <h5 class="sponsor-caption">In Kind Sponsors</h5>
+          <p if="{! app.sponsors.inkind.length}"><strong>No In Kind Sponsors</strong></p>
           <a each="{sponsor in app.sponsors.inkind}" href="{sponsor.url}" target="_blank"><img src="{sponsor.logo}" title="{sponsor.name}"/></a>
         </div>
       </div>
