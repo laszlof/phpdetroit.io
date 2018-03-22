@@ -8,7 +8,7 @@ window.app = ((app) => {
   app.route = route;
   app.conference = {
     date: 1532606400000,
-    cfp: true,
+    cfp: false,
     name: 'PHPDetroit Conference',
     location: {
       url: 'http://www.marriott.com/hotels/travel/dtwli-detroit-marriott-livonia/',
