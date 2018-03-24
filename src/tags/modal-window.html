@@ -1,11 +1,12 @@
 <modal-window onclick="{handleClose}" onkeypress="{handleClose}">
   <div class="modal-background"></div>
-  <section if="{contentTag}" data-is="{contentTag}" class="modal-content"></section>
+  <section if="{contentTag}" data-is="{contentTag}" content-data="{contentData}" class="modal-content"></section>
 
   <script type="es6">
     let tag = this
 
     this.contentTag = null
+    this.contentData = opts.contentData || {};
 
     this.open = () => {
       document.body.classList.add('no-scroll')

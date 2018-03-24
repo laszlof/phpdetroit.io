@@ -491,6 +491,10 @@ ul li {
   margin: 25px 0;
 }
 
+.speaker figure {
+  cursor: pointer;
+}
+
 .speaker h4 {
   margin-top: 15px;
   margin-bottom: 5px;
@@ -1054,7 +1058,10 @@ Countdown jquery
   }
 }
 
-body.no-scroll { overflow: hidden; }
+body.no-scroll {
+  overflow: hidden;
+}
+
 modal-window {
   display: none;
   position: fixed;
@@ -1064,8 +1071,6 @@ modal-window {
   right: 0;
   bottom: 0;
   overflow: hidden;
-/*  background: url(/assets/images/backgrounds/detroit.jpg) no-repeat center center/cover;
-  filter: blur(.1em);*/
 }
 modal-window:after {
   content: ' ';
@@ -1087,7 +1092,6 @@ modal-window.open {
   right: 0;
   bottom: 0;
   background: url(/assets/images/backgrounds/detroit.jpg) no-repeat center center/cover;
-  filter: blur(.1em);
 }
 .modal-content {
   position: relative;

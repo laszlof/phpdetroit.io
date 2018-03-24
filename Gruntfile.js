@@ -13,6 +13,7 @@ module.exports = (grunt) => {
     '.tmp/app.js': [
       'src/js/app.js',
       'src/js/mixins/time.js',
+      'src/js/sessions.js',
       'src/js/speakers.js',
       'src/js/schedule.js',
       'src/js/sponsors.js',

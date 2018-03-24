@@ -1,0 +1,23 @@
+<speaker-details>
+  <div class="row">
+    <div class="col-md-4">
+      <h1>{speaker.name}</h1>
+    </div>
+    <div class="col-md-8">
+      <figure>
+        <img alt="{this.speaker.name}" class="img-responsive center-block" src="{this.speaker.image}">
+      </figure>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <h4>Biography</h4>
+    </div>
+    <div class="col-md-4">
+      <h4>Talks</h4>
+    </div>
+  </div>
+  <script type="es6">
+    this.speaker = opts.contentData
+  </script>
+</speaker-details>
