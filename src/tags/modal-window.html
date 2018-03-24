@@ -1,12 +1,19 @@
 <modal-window onclick="{handleClose}" onkeypress="{handleClose}">
-  <div class="modal-background"></div>
-  <section if="{contentTag}" data-is="{contentTag}" content-data="{contentData}" class="modal-content"></section>
+  <div ref="background" class="modal-background"></div>
+  <section
+    if="{content.tag}"
+    data-is="{content.tag}"
+    content-data="{content.data}"
+    class="modal-content">
+  </section>
 
   <script type="es6">
     let tag = this
 
-    this.contentTag = null
-    this.contentData = opts.contentData || {};
+    this.content = {
+      tag: null,
+      data: {}
+    }
 
     this.open = () => {
       document.body.classList.add('no-scroll')
@@ -17,8 +24,16 @@
       tag.root.classList.remove('open')
     }
 
-    this.handleClose = () => {
+    this.handleClose = (event) => {
+      if (event && event.target !== tag.root) {
+        return
+      }
       this.close()
+    }
+
+    app.modal = (data) => {
+      tag.update(data)
+      tag.open()
     }
   </script>
 </modal-window>

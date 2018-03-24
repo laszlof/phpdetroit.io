@@ -3,15 +3,4 @@
   <main-content/>
   <site-footer/>
   <modal-window ref="modal"/>
-
-  <script type="es6">
-    let modal = null
-    this.on('mount', () => { modal = this.refs.modal })
-    app.event = riot.observable()
-
-    app.event.on('modal:show', (data) => {
-      modal.update(data)
-      modal.open()
-    })
-  </script>
 </app>
