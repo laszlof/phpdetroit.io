@@ -22,7 +22,8 @@
     "app": true,
     "SmoothScroll": true,
     "countdown": true,
-    "ga": true
+    "ga": true,
+    "showdown": true
   },
   "env": {
     "browser": true

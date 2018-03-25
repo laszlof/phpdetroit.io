@@ -1,0 +1,14 @@
+<markdown-content>
+
+  <script type="es6">
+    let md = new showdown.Converter()
+
+    function markdownIt() {
+      let text = opts.text
+      this.root.innerHTML = md.makeHtml(text)
+    }
+
+    this.on('mount', markdownIt)
+    this.on('update', markdownIt)
+  </script>
+</markdown-content>
