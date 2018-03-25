@@ -24,15 +24,12 @@
       tag.close()
     }
 
-    app.modal = (tagname, data) => { console.log(tagname, data)
-      if (tag.refs.content && tag.refs.content.unmount) { console.log('unmount')
+    app.modal = (tagname, data) => {
+      if (tag.refs.content && tag.refs.content.unmount) {
         tag.refs.content.unmount(true)
       }
 
       tag.update({ content: { data: data } })
-      console.log(
-      riot.mount('section[ref="content"]', tagname, { contentData: data })
-      )
       tag.open()
     }
   </script>
