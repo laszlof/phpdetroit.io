@@ -484,6 +484,10 @@ ul li {
  * 6.3 Section: Speaker
  */
 
+.inmodal .speaker {
+  color: #fff;
+}
+
 .speaker {
   text-align: center;
   color: #313131;

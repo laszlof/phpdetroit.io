@@ -12,7 +12,7 @@ app.speakers = {
     },
   },
   joeferguson: {
-    ident: 'joefurguson',
+    ident: 'joeferguson',
     name: 'Joe Ferguson',
     bio: '',
     image: 'assets/images/speakers/joe_ferguson.jpg',
@@ -45,3 +45,10 @@ app.speakers = {
     },
   },
 };
+
+Object.keys(app.speakers).forEach((key) => {
+  let speaker = app.speakers[key]
+  $.get(`/assets/md/bio/${speaker.ident}.md`, (data) => {
+    app.speakers[speaker.ident].bio = data
+  }, 'text')
+})
