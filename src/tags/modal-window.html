@@ -1,12 +1,6 @@
 <modal-window onclick="{handleClose}" onkeypress="{handleClose}">
   <div ref="background" class="modal-background"></div>
-  <section
-    if="{content.tag}"
-    ref="content"
-    data-is="{content.tag}"
-    content-data="{content.data}"
-    class="modal-content">
-  </section>
+  <section ref="content" content-data="{content.data}" class="modal-content"></section>
 
   <script type="es6">
     let tag = this
@@ -30,8 +24,15 @@
       tag.close()
     }
 
-    app.modal = (data) => {
-      tag.update(data)
+    app.modal = (tagname, data) => { console.log(tagname, data)
+      if (tag.refs.content && tag.refs.content.unmount) { console.log('unmount')
+        tag.refs.content.unmount(true)
+      }
+
+      tag.update({ content: { data: data } })
+      console.log(
+      riot.mount('section[ref="content"]', tagname, { contentData: data })
+      )
       tag.open()
     }
   </script>

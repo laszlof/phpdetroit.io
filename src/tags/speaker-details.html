@@ -23,17 +23,17 @@
     let tag = this
 
     this.speaker = opts.contentData.speaker
+    this.sessions = app.getSessions(this.speaker.ident)
 
     this.on('update', () => {
       tag.speaker = opts.contentData.speaker
       tag.sessions = app.getSessions(tag.speaker.ident)
     })
 
-    this.sessions = app.getSessions(this.speaker.ident)
     this.day = (day) => [, 'Thursday', 'Friday' , 'Saturday'][day]
 
     this.showSessionDetails = (event) => {
-      app.modal({ content: { tag: 'session-details', data: event.item } })
+      app.modal('session-details', event.item)
     }
   </script>
 </speaker-details>
