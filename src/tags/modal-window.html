@@ -30,6 +30,7 @@
       }
 
       tag.update({ content: { data: data } })
+      riot.mount('section[ref="content"]', tagname, { contentData: data })
       tag.open()
     }
   </script>
