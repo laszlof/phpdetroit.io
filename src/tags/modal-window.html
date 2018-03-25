@@ -2,6 +2,7 @@
   <div ref="background" class="modal-background"></div>
   <section
     if="{content.tag}"
+    ref="content"
     data-is="{content.tag}"
     content-data="{content.data}"
     class="modal-content">
@@ -10,10 +11,7 @@
   <script type="es6">
     let tag = this
 
-    this.content = {
-      tag: null,
-      data: {}
-    }
+    this.content = { tag: null, data: {} }
 
     this.open = () => {
       document.body.classList.add('no-scroll')
@@ -28,7 +26,8 @@
       if (event && event.target !== tag.root) {
         return
       }
-      this.close()
+
+      tag.close()
     }
 
     app.modal = (data) => {

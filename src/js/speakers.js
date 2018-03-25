@@ -1,6 +1,8 @@
 app.speakers = {
   calevans: {
+    ident: 'calevans',
     name: 'Cal Evans',
+    bio: '',
     image: 'assets/images/speakers/cal_evans.jpg',
     title: 'Nexcess',
     social: {
@@ -10,7 +12,9 @@ app.speakers = {
     },
   },
   joeferguson: {
+    ident: 'joefurguson',
     name: 'Joe Ferguson',
+    bio: '',
     image: 'assets/images/speakers/joe_ferguson.jpg',
     title: 'Ministry Brands',
     social: {
@@ -19,7 +23,9 @@ app.speakers = {
     },
   },
   christankersley: {
+    ident: 'christankersley',
     name: 'Chris Tankersley',
+    bio: '',
     image: 'assets/images/speakers/chris_tankersley.jpg',
     title: 'InQuest, LLC',
     social: {
@@ -28,7 +34,9 @@ app.speakers = {
     },
   },
   margaretstaples: {
+    ident: 'margaretstaples',
     name: 'Margaret Staples',
+    bio: '',
     image: 'assets/images/speakers/margaret_staples.jpg',
     title: 'Twilio',
     social: {

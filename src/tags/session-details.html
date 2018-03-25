@@ -1,0 +1,28 @@
+<session-details>
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{session.name}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <figure onclick="{showSpeakerDetails}">
+        <img alt="{speaker.name}" class="img-responsive center-block" src="{speaker.image}"/>
+      </figure>
+    </div>
+    <div class="col-md-8">
+      {session.description}
+    </div>
+  </div>
+
+  <script type-"es6">
+    let tag = this
+
+    this.session = opts.contentData.session
+    this.speaker = app.getSpeaker(this.session.speaker)
+
+    this.showSpeakerDetails = (event) => {
+      app.modal({ content: { tag: 'speaker-details', data: { speaker: this.speaker } } })
+    }
+  </script>
+</session-details>

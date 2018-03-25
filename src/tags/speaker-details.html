@@ -5,19 +5,42 @@
     </div>
     <div class="col-md-8">
       <figure>
-        <img alt="{this.speaker.name}" class="img-responsive center-block" src="{this.speaker.image}">
+        <img alt="{speaker.name}" class="img-responsive center-block" src="{speaker.image}"/>
       </figure>
     </div>
   </div>
   <div class="row">
     <div class="col-md-8">
       <h4>Biography</h4>
+      {speaker.bio}
     </div>
     <div class="col-md-4">
       <h4>Talks</h4>
+      <ul>
+        <li each="{session in sessions}" onclick="{showSessionDetails}">
+          <h5>{session.name}</h5>
+          <h6>{day(session.day)} {session.start_time}</h6>
+          <p>{session.description}</p>
+        </li>
+      </ul>
     </div>
   </div>
+
   <script type="es6">
-    this.speaker = opts.contentData
+    let tag = this
+
+    this.speaker = opts.contentData.speaker
+    this.on('update', () => {
+      tag.speaker = opts.contentData.speaker
+    })
+
+    this.sessions = app.getSessions(this.speaker.ident)
+    this.day = (day) => {
+      return [, 'Thursday', 'Friday' , 'Saturday'][day]
+    }
+
+    this.showSessionDetails = (event) => {
+      app.modal({ content: { tag: 'session-details', data: event.item } })
+    }
   </script>
 </speaker-details>

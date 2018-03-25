@@ -6,7 +6,17 @@
       </div>
     </div>
     <div class="row">
-      <speaker each="{speaker, ident in app.speakers}" speaker="{speaker}" id="speaker-{ident}"/>
+      <speaker
+        each="{speaker, ident in app.speakers}"
+        speaker="{speaker}"
+        id="speaker-{ident}"
+        onclick="{showSpeakerDetails}"/>
     </div>
   </div>
+
+  <script type="es6">
+    this.showSpeakerDetails = (event) => {
+      app.modal({ content: { tag: 'speaker-details', data: event.item } })
+    }
+  </script>
 </section-speakers>
