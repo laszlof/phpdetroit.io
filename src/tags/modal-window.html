@@ -1,11 +1,11 @@
 <modal-window onclick="{handleClose}" onkeypress="{handleClose}">
-  <div class="modal-background"></div>
-  <section if="{contentTag}" data-is="{contentTag}" class="modal-content"></section>
+  <div ref="background" class="modal-background"></div>
+  <section ref="content" content-data="{content.data}" class="modal-content"></section>
 
   <script type="es6">
     let tag = this
 
-    this.contentTag = null
+    this.content = { tag: null, data: {} }
 
     this.open = () => {
       document.body.classList.add('no-scroll')
@@ -16,8 +16,24 @@
       tag.root.classList.remove('open')
     }
 
-    this.handleClose = () => {
-      this.close()
+    this.handleClose = (event) => {
+      if (event && event.target !== tag.root) {
+        return
+      }
+
+      tag.close()
+    }
+
+    app.modal = (tagname, data) => { console.log(tagname, data)
+      if (tag.refs.content && tag.refs.content.unmount) { console.log('unmount')
+        tag.refs.content.unmount(true)
+      }
+
+      tag.update({ content: { data: data } })
+      console.log(
+      riot.mount('section[ref="content"]', tagname, { contentData: data })
+      )
+      tag.open()
     }
   </script>
 </modal-window>

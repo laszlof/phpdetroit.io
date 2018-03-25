@@ -5,13 +5,18 @@
         <h3 class="section-title">Speakers</h3>
       </div>
     </div>
-    <div class="row text-center">
-      <div class="col-md-12">
-        <h5>Speakers will be announced soon!</h5>
-      </div>
-    </div>
     <div class="row">
-      <speaker each="{speaker, ident in app.speakers}" speaker="{speaker}" id="speaker-{ident}"/>
+      <speaker
+        each="{speaker, ident in app.speakers}"
+        speaker="{speaker}"
+        id="speaker-{ident}"
+        onclick="{showSpeakerDetails}"/>
     </div>
   </div>
+
+  <script type="es6">
+    this.showSpeakerDetails = (event) => {
+      app.modal('speaker-details', event.item)
+    }
+  </script>
 </section-speakers>

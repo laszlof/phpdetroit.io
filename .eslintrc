@@ -8,7 +8,8 @@
     "no-unused-vars": [2, {"args": "after-used", "argsIgnorePattern": "^_"}],
     "prefer-const": [0],
     "prefer-destructuring": [0],
-    "no-bitwise": [0]
+    "no-bitwise": [0],
+    "no-plusplus": [0]
   },
   "globals": {
     "riot": true,
@@ -21,7 +22,8 @@
     "app": true,
     "SmoothScroll": true,
     "countdown": true,
-    "ga": true
+    "ga": true,
+    "showdown": true
   },
   "env": {
     "browser": true

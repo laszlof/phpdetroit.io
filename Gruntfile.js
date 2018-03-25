@@ -9,10 +9,12 @@ module.exports = (grunt) => {
       'node_modules/riot-route/dist/route.js',
       'node_modules/moment/moment.js',
       'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
+      'node_modules/showdown/dist/showdown.js',
     ],
     '.tmp/app.js': [
       'src/js/app.js',
       'src/js/mixins/time.js',
+      'src/js/sessions.js',
       'src/js/speakers.js',
       'src/js/schedule.js',
       'src/js/sponsors.js',

@@ -1,0 +1,39 @@
+<speaker-details>
+  <div class="row">
+    <speaker class="inmodal" speaker="{speaker}"/>
+    <div class="col-md-9 col-sm-9">
+      <h4>Biography</h4>
+      <p data-is="markdown-content" if="{speaker.bio}" text="{speaker.bio}"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Talks</h4>
+      <ul>
+        <li each="{session in sessions}" onclick="{showSessionDetails}">
+          <h5>{session.name}</h5>
+          <h6>{day(session.day)} {session.start_time}</h6>
+          <p>{session.description}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="es6">
+    let tag = this
+
+    this.speaker = opts.contentData.speaker
+    this.sessions = app.getSessions(this.speaker.ident)
+
+    this.on('update', () => {
+      tag.speaker = opts.contentData.speaker
+      tag.sessions = app.getSessions(tag.speaker.ident)
+    })
+
+    this.day = (day) => [, 'Thursday', 'Friday' , 'Saturday'][day]
+
+    this.showSessionDetails = (event) => {
+      app.modal('session-details', event.item)
+    }
+  </script>
+</speaker-details>

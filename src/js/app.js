@@ -42,6 +42,29 @@ window.app = ((app) => {
     },
   }
 
+  app.getSessions = (key) => {
+    let name = 'speaker'
+    if (Number.isInteger(key)) {
+      name = 'day'
+    }
+
+    return app.util.find(app.sessions, name, key)
+  }
+
+  app.util = {
+    find: (arr, key, value) => {
+      let results = []
+      let i = 0
+      arr = arr || []
+      for (i = 0; i <= arr.length - 1; i++) {
+        if (arr[i][key] === value) {
+          results.push(arr[i])
+        }
+      }
+      return results;
+    },
+  }
+
   app.route('*', (target) => {
     if (ga) {
       ga('send', 'pageview', `/#${target}`)
