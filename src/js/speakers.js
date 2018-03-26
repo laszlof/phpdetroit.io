@@ -44,6 +44,16 @@ app.speakers = {
       joindin: 'https://joind.in/user/deadlugosi',
     },
   },
+  ryanweaver: {
+    ident: 'ryanweaver',
+    name: 'Ryan Weaver',
+    bio: '',
+    image: 'assets/images/speakers/ryan_weaver.jpg',
+    title: 'KnpUniversity',
+    social: {
+      twitter: 'https://twitter.com/weaverryan',
+    },
+  },
 };
 
 Object.keys(app.speakers).forEach((key) => {
