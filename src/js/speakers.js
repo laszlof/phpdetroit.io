@@ -54,6 +54,17 @@ app.speakers = {
       twitter: 'https://twitter.com/weaverryan',
     },
   },
+  chrishartjes: {
+    ident: 'chrishartjes',
+    name: 'Chris Hartjes',
+    bio: '',
+    image: 'assets/images/speakers/chris_hartjes.jpg',
+    title: 'Grumpy Learning Inc.',
+    social: {
+      twitter: 'https://twitter.com/grmpyprogrammer',
+      joindin: 'https://joind.in/user/chartjes',
+    },
+  },
 };
 
 Object.keys(app.speakers).forEach((key) => {
