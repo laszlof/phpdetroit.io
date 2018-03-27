@@ -1,0 +1,1 @@
+When he isn’t building or maintaining web applications (usually APIs) for a variety of contract clients or helping organize AustinPHP meetup and Longhorn PHP Conference, Ian’s probably at, or biking to or from, one of Austin, Texas’s 24-hour coffee shops, or opining some aspect of transportation infrastructure.
