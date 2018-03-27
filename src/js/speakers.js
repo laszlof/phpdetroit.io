@@ -65,6 +65,60 @@ app.speakers = {
       joindin: 'https://joind.in/user/chartjes',
     },
   },
+  jessicamauerhan: {
+    ident: 'jessicamauerhan',
+    name: 'Jessica Mauerhan',
+    bio: '',
+    image: 'assets/images/speakers/jessica_mauerhan.jpg',
+    title: 'Help Scout',
+    social: {
+      twitter: 'https://twitter.com/JessicaMauerhan',
+      joindin: 'https://joind.in/user/JessicaMauerhan',
+    },
+  },
+  adamculp: {
+    ident: 'adamculp',
+    name: 'Adam Culp',
+    bio: '',
+    image: 'assets/images/speakers/adam_culp.jpg',
+    title: 'Rogue Wave Software',
+    social: {
+      twitter: 'https://twitter.com/adamculp',
+      joindin: 'https://joind.in/user/adamculp',
+    },
+  },
+  larrygarfield: {
+    ident: 'larrygarfield',
+    name: 'Larry Garfield',
+    bio: '',
+    image: 'assets/images/speakers/larry_garfield.jpg',
+    title: 'Platform.sh',
+    social: {
+      twitter: 'https://twitter.com/crell',
+    },
+  },
+  ianlittman: {
+    ident: 'ianlittman',
+    name: 'Ian Littman',
+    bio: '',
+    image: 'assets/images/speakers/ian_littman.jpg',
+    title: 'Cloudy Hills',
+    social: {
+      twitter: 'https://twitter.com/iansltx',
+    },
+  },
+  mikestowe: {
+    ident: 'mikestowe',
+    name: 'Mike Stowe',
+    bio: '',
+    image: 'assets/images/speakers/mike_stowe.jpg',
+    title: 'RingCentral',
+    social: {
+      twitter: 'https://twitter.com/mikegstowe',
+      joindin: 'https://joind.in/user/mikegstowe',
+      linkedin: 'https://www.linkedin.com/in/mikestowe/',
+    },
+  },
 };
 
 Object.keys(app.speakers).forEach((key) => {

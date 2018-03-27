@@ -1,0 +1,1 @@
+Jessica is a software engineer who has been working with PHP and related technologies for over a decade. She enjoys mentoring fellow engineers in automated testing, test driven development, and quality code design. She lives in McKinney Texas with her family and loves coffee, comedy and podcasts.
