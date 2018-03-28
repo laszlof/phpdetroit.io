@@ -63,6 +63,27 @@ window.app = ((app) => {
       }
       return results;
     },
+    chunk: (arr, size) => {
+      let result = []
+      let i = 0
+      for (i = 0; i < arr.length; i += size) {
+        result.push(arr.slice(i, i + size))
+      }
+      return result
+    },
+    loadFile: (url, callback) => {
+      let xhr = new XMLHttpRequest()
+      xhr.onload = () => {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            callback(xhr)
+          }
+        }
+      }
+      xhr.open('GET', url, true)
+      xhr.timeout = 5000
+      xhr.send(null)
+    },
   }
 
   app.route('*', (target) => {

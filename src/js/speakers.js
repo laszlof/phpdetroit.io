@@ -1,5 +1,5 @@
-app.speakers = {
-  calevans: {
+app.speakers = [
+  {
     ident: 'calevans',
     name: 'Cal Evans',
     bio: '',
@@ -11,7 +11,7 @@ app.speakers = {
       joindin: 'https://joind.in/user/calevans',
     },
   },
-  joeferguson: {
+  {
     ident: 'joeferguson',
     name: 'Joe Ferguson',
     bio: '',
@@ -22,7 +22,7 @@ app.speakers = {
       joindin: 'https://joind.in/user/Svpernova09',
     },
   },
-  christankersley: {
+  {
     ident: 'christankersley',
     name: 'Chris Tankersley',
     bio: '',
@@ -33,7 +33,7 @@ app.speakers = {
       joindin: 'https://joind.in/user/dragonmantank',
     },
   },
-  margaretstaples: {
+  {
     ident: 'margaretstaples',
     name: 'Margaret Staples',
     bio: '',
@@ -44,7 +44,7 @@ app.speakers = {
       joindin: 'https://joind.in/user/deadlugosi',
     },
   },
-  ryanweaver: {
+  {
     ident: 'ryanweaver',
     name: 'Ryan Weaver',
     bio: '',
@@ -54,7 +54,7 @@ app.speakers = {
       twitter: 'https://twitter.com/weaverryan',
     },
   },
-  chrishartjes: {
+  {
     ident: 'chrishartjes',
     name: 'Chris Hartjes',
     bio: '',
@@ -65,7 +65,7 @@ app.speakers = {
       joindin: 'https://joind.in/user/chartjes',
     },
   },
-  jessicamauerhan: {
+  {
     ident: 'jessicamauerhan',
     name: 'Jessica Mauerhan',
     bio: '',
@@ -76,7 +76,7 @@ app.speakers = {
       joindin: 'https://joind.in/user/JessicaMauerhan',
     },
   },
-  adamculp: {
+  {
     ident: 'adamculp',
     name: 'Adam Culp',
     bio: '',
@@ -87,7 +87,7 @@ app.speakers = {
       joindin: 'https://joind.in/user/adamculp',
     },
   },
-  larrygarfield: {
+  {
     ident: 'larrygarfield',
     name: 'Larry Garfield',
     bio: '',
@@ -97,7 +97,7 @@ app.speakers = {
       twitter: 'https://twitter.com/crell',
     },
   },
-  ianlittman: {
+  {
     ident: 'ianlittman',
     name: 'Ian Littman',
     bio: '',
@@ -107,7 +107,7 @@ app.speakers = {
       twitter: 'https://twitter.com/iansltx',
     },
   },
-  mikestowe: {
+  {
     ident: 'mikestowe',
     name: 'Mike Stowe',
     bio: '',
@@ -119,7 +119,7 @@ app.speakers = {
       linkedin: 'https://www.linkedin.com/in/mikestowe/',
     },
   },
-  philipsharp: {
+  {
     ident: 'philipsharp',
     name: 'Philip Sharp',
     bio: '',
@@ -129,11 +129,33 @@ app.speakers = {
       twitter: 'https://twitter.com/philipsharp',
     },
   },
-};
+  {
+    ident: 'jdflynn',
+    name: 'J.D. Flynn',
+    bio: '',
+    image: 'assets/images/speakers/jd_flynn.jpg',
+    title: 'isobar',
+    social: {
+      twitter: 'https://twitter.com/JDDoesDev',
+      linkedin: 'https://linkedin.com/in/jflynn8',
+    },
+  },
+  {
+    ident: 'andrewrota',
+    name: 'Andrew Rota',
+    bio: '',
+    image: 'assets/images/speakers/andrew_rota.jpg',
+    title: 'Wayfair',
+    social: {
+      twitter: 'https://twitter.com/andrewrota',
+      linkedin: 'https://www.linkedin.com/in/andrewrota/',
+      joindin: 'https://joind.in/user/andrewrota',
+    },
+  },
+];
 
-Object.keys(app.speakers).forEach((key) => {
-  let speaker = app.speakers[key]
-  $.get(`/assets/md/bio/${speaker.ident}.md`, (data) => {
-    app.speakers[speaker.ident].bio = data
-  }, 'text')
+app.speakers.forEach((speaker, idx) => {
+  app.util.loadFile(`/assets/md/bio/${speaker.ident}.md`, (data) => {
+    app.speakers[idx].bio = data.responseText
+  })
 })
