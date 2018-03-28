@@ -119,6 +119,16 @@ app.speakers = {
       linkedin: 'https://www.linkedin.com/in/mikestowe/',
     },
   },
+  philipsharp: {
+    ident: 'philipsharp',
+    name: 'Philip Sharp',
+    bio: '',
+    image: 'assets/images/speakers/philip_sharp.jpg',
+    title: 'SmugMug',
+    social: {
+      twitter: 'https://twitter.com/philipsharp',
+    },
+  },
 };
 
 Object.keys(app.speakers).forEach((key) => {
