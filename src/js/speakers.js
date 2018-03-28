@@ -152,6 +152,18 @@ app.speakers = [
       joindin: 'https://joind.in/user/andrewrota',
     },
   },
+  {
+    ident: 'stevegrunwell',
+    name: 'Steve Grunwell',
+    bio: '',
+    image: 'assets/images/speakers/steve_grunwell.jpg',
+    title: 'LiquidWeb',
+    social: {
+      twitter: 'https://twitter.com/stevegrunwell',
+      linkedin: 'https://linkedin.com/in/stevegrunwell',
+      joindin: 'https://joind.in/user/stevegrunwell',
+    },
+  },
 ];
 
 app.speakers.forEach((speaker, idx) => {
