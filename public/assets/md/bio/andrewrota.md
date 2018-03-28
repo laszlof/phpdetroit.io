@@ -1,0 +1,1 @@
+Andrew Rota is a software engineer and engineering manager specializing in platform-level frontend user interface architecture for web applications at scale. He currently leads the Frontend Infrastructure team at Wayfair in Boston, MA.
