@@ -16,12 +16,10 @@
   </div>
 
   <script type="es6">
-    let tag = this
-
     this.session = opts.contentData.session
     this.speaker = app.getSpeaker(this.session.speaker)
 
-    this.showSpeakerDetails = (event) => {
+    this.showSpeakerDetails = () => {
       app.modal('speaker-details', { speaker: this.speaker })
     }
   </script>

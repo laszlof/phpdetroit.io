@@ -164,6 +164,18 @@ app.speakers = [
       joindin: 'https://joind.in/user/stevegrunwell',
     },
   },
+  {
+    ident: 'davidstokes',
+    name: 'David Stokes',
+    bio: '',
+    image: 'assets/images/speakers/david_stokes.jpg',
+    title: 'Oracle Corporation',
+    social: {
+      twitter: 'https://twitter.com/Stoker',
+      joindin: 'https://joind.in/user/davidmstokes',
+      linkedin: 'https://www.linkedin.com/in/davidmstokes/',
+    },
+  },
 ];
 
 app.speakers.forEach((speaker, idx) => {
