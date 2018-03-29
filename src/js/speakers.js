@@ -31,6 +31,8 @@ app.speakers = [
     social: {
       twitter: 'https://twitter.com/dragonmantank',
       joindin: 'https://joind.in/user/dragonmantank',
+      github: 'https://github.com/dragonmantank',
+      website: 'http://ctankersley.com/',
     },
   },
   {
@@ -52,6 +54,7 @@ app.speakers = [
     title: 'KnpUniversity',
     social: {
       twitter: 'https://twitter.com/weaverryan',
+      github: 'https://github.com/weaverryan',
     },
   },
   {
@@ -63,6 +66,7 @@ app.speakers = [
     social: {
       twitter: 'https://twitter.com/grmpyprogrammer',
       joindin: 'https://joind.in/user/chartjes',
+      website: 'https://grumpy-learning.com/',
     },
   },
   {
@@ -95,6 +99,7 @@ app.speakers = [
     title: 'Platform.sh',
     social: {
       twitter: 'https://twitter.com/crell',
+      website: 'https://www.garfieldtech.com/',
     },
   },
   {
@@ -117,6 +122,7 @@ app.speakers = [
       twitter: 'https://twitter.com/mikegstowe',
       joindin: 'https://joind.in/user/mikegstowe',
       linkedin: 'https://www.linkedin.com/in/mikestowe/',
+      github: 'https://github.com/mikestowe',
     },
   },
   {
@@ -162,6 +168,8 @@ app.speakers = [
       twitter: 'https://twitter.com/stevegrunwell',
       linkedin: 'https://linkedin.com/in/stevegrunwell',
       joindin: 'https://joind.in/user/stevegrunwell',
+      github: 'https://github.com/stevegrunwell',
+      website: 'https://stevegrunwell.com/',
     },
   },
   {
@@ -174,6 +182,19 @@ app.speakers = [
       twitter: 'https://twitter.com/Stoker',
       joindin: 'https://joind.in/user/davidmstokes',
       linkedin: 'https://www.linkedin.com/in/davidmstokes/',
+      website: 'https://elephantdolphin.blogspot.com/',
+    },
+  },
+  {
+    ident: 'elizabethsmith',
+    name: 'Elizabeth Smith',
+    bio: '',
+    image: 'assets/images/speakers/elizabeth_smith.jpg',
+    title: 'Burr Oak Tool Inc.',
+    social: {
+      twitter: 'https://twitter.com/auroraeosrose',
+      linkedin: 'https://www.linkedin.com/in/auroraeosrose',
+      github: 'https://github.com/auroraeosrose',
     },
   },
 ];
