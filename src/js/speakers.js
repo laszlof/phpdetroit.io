@@ -197,6 +197,19 @@ app.speakers = [
       github: 'https://github.com/auroraeosrose',
     },
   },
+  {
+    ident: 'justinyost',
+    name: 'Justin Yost',
+    bio: '',
+    image: 'assets/images/speakers/justin_yost.jpg',
+    title: 'Wirecutter',
+    social: {
+      twitter: 'https://twitter.com/justinyost',
+      joindin: 'https://joind.in/user/jtyost2',
+      linkedin: 'https://www.linkedin.com/in/justinyost/',
+      website: 'https://justinyost.com/',
+    },
+  },
 ];
 
 app.speakers.forEach((speaker, idx) => {
