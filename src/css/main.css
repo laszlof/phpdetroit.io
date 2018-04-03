@@ -635,7 +635,7 @@ a:focus, a:hover {
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 1px;
 }
 
@@ -702,6 +702,14 @@ a:focus, a:hover {
 
 .schedule_item.keynote {
   background-color: orange;
+}
+
+.session-name {
+  cursor: pointer;
+}
+
+.session-name:hover {
+  opacity: .7;
 }
 
 .panel-body {

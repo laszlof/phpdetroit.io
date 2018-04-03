@@ -1,5 +1,6 @@
 <speaker>
   <div class="col-md-3 col-sm-3">
+    <yield from="before"/>
     <div class="speaker">
       <figure onclick="{opts.imageClick}">
         <img alt="{opts.speaker.name}" class="img-responsive center-block" src="{opts.speaker.image}">
@@ -16,6 +17,7 @@
       </ul>
     </div>
     <!-- /.speaker -->
+  <yield from="after"/>
   </div>
   <!-- /.col-md-4 -->
 </speaker>

@@ -25,14 +25,11 @@
               <div class="time"><span class="fa fa-clock-o"></span> {session.start_time} - {session.end_time} | {session.room}</div>
               <h4 class="panel-title">
                 <div class="schedule_expand">
-                  <div class="full-width">
+                  <div class="full-width session-name" onclick="{showSessionDetails}">
                     {session.name}
                   </div>
                 </div>
               </h4>
-            </div>
-            <div class="panel-body">
-              {session.description}
             </div>
           </div>
         </div>
@@ -42,6 +39,10 @@
 
   <script type="es6">
     let tag = this
+
+    this.showSessionDetails = (event) => {
+      app.modal('session-details', event.item)
+    }
 
     this.tab = {
       onClick: (event) => {

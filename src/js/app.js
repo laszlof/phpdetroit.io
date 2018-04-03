@@ -31,7 +31,7 @@ window.app = ((app) => {
     joindin: 'https://joind.in/event/phpdetroit-conference-2018',
   }
 
-  app.getSpeaker = ident => app.speakers[ident] || {
+  app.getSpeaker = ident => app.util.find(app.speakers, 'ident', ident)[0] || {
     name: 'TBD',
     image: 'assets/images/speakers/placeholder.png',
     title: '',
