@@ -1,0 +1,1 @@
+Docker is quickly becoming an invaluable development and deployment tool for many organizations. Come and spend the day learning about what Docker is, how to use it, how to integrate it into your workflow, and build an environment that works for you and the rest of your team. This hands-on tutorial will give you the kick-start needed to start using Docker effectively.

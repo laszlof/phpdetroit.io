@@ -1,0 +1,3 @@
+GraphQL is a powerful API query language that allows a web client to ask and receive the exact shape of the data it needs. As an alternative to REST, GraphQL promises to eliminate over-fetching data, reduce the need for multiple API calls, and let engineers move faster by leveraging the powerful developer tooling it enables.
+
+PHP and GraphQL work great together, and whether you’re building a greenfield application or working in a existing codebase it’s easy to get started writing a GraphQL API. This talk will introduce you to GraphQL, and demonstrate how you can build and use a such an API, in PHP, today.
