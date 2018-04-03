@@ -210,6 +210,17 @@ app.speakers = [
       website: 'https://justinyost.com/',
     },
   },
+  {
+    ident: 'joerozner',
+    name: 'Joe Rozner',
+    bio: '',
+    image: 'assets/images/speakers/joe_rozner.jpg',
+    title: 'Prevoty',
+    social: {
+      twitter: 'https://twitter.com/jrozner',
+      linkedin: 'https://www.linkedin.com/in/joe-rozner-a5831143/',
+    },
+  },
 ];
 
 app.speakers.forEach((speaker, idx) => {
