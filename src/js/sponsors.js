@@ -1,14 +1,6 @@
 app.sponsors = {
-  platinum: [
-    // {
-    //   name: 'Thermo',
-    //   url: 'https://thermo.io',
-    //   logo: '/assets/images/sponsors/thermo_logo.svg',
-    // },
-  ],
-  gold: [
-
-  ],
+  platinum: [],
+  gold: [],
   silver: [
     {
       name: 'Yochana IT Solutions',
@@ -36,12 +28,8 @@ app.sponsors = {
       logo: 'assets/images/sponsors/thermo_logo.png',
     },
   ],
-  bronze: [
-
-  ],
-  community: [
-
-  ],
+  bronze: [],
+  community: [],
   inkind: [
     {
       name: 'JetBrains',
