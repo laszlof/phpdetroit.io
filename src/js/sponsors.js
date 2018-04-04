@@ -25,7 +25,7 @@ app.sponsors = {
     {
       name: 'Thermo',
       url: 'https://thermo.io',
-      logo: 'assets/images/sponsors/thermo_logo.png',
+      logo: 'assets/images/sponsors/thermo_logo.svg',
     },
   ],
   bronze: [],
