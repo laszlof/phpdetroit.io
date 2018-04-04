@@ -20,7 +20,10 @@ body {
 a {
   color: #000;
 }
-
+.modal-content a {
+  color: #ccc;
+  text-decoration: underline;
+}
 a:focus {
   outline: none;
 }
@@ -69,7 +72,7 @@ ul li {
   display: inline-block;
   height: 32px;
   width: 32px;
-  color: #4e4e4e;
+  color: #fff;
 }
 
 .social-block li a i {
@@ -82,7 +85,7 @@ ul li {
 }
 
 .social-block li a:hover, .social-block li a:focus {
-  color: #000;
+  color: #93b0dc;
 }
 
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
@@ -484,15 +487,21 @@ ul li {
  * 6.3 Section: Speaker
  */
 
-.inmodal .speaker {
-  color: #fff;
-}
 
 .speaker {
   text-align: center;
-  color: #313131;
+  color: #fff;
   text-transform: uppercase;
   margin: 25px 0;
+  padding: 10px 12px;
+  background-color: #000;
+  border-radius: 4px;
+}
+.inmodal .speaker {
+  margin-top: 10px;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 
 .speaker figure {
@@ -507,7 +516,6 @@ ul li {
 .speaker p {
   margin-bottom: 5px;
 }
-
 .speaker img:hover {
   opacity: .7;
 }
@@ -536,6 +544,10 @@ ul li {
 
 .modal-content {
   border-radius: 0;
+}
+
+.modal-content p {
+  font-size: 14px;
 }
 
 /*
