@@ -1,0 +1,1 @@
+Joe is an engineer at Prevoty where he has built semantic analysis tools, language runtimes, generalized solutions to common vulnerability classes, and designed novel integration technology leveraging runtime memory patching and instrumentation. He has a passion for reverse engineering, exploitation, teaching, and sharing research with others.

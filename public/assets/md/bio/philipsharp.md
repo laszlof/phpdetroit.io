@@ -1,0 +1,1 @@
+Philip Sharp has been writing PHP professionally for almost 15 years. He is currently a backend engineering lead at the photo-hosting service [SmugMug](https://www.smugmug.com/). He likes to improve the efficiency of code and coding. Philip is also the creator and editor of [A Field Guide to Elephpants](http://afieldguidetoelephpants.net/).

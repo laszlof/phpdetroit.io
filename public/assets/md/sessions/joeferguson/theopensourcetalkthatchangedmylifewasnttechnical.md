@@ -1,0 +1,3 @@
+The first PHP conference I ever went to changed my life. I saw Ed Finkler talking about his struggles with mental health issues. I related so well with everything he said and was shocked to find out not everyone feels this way. Come learn about Open Sourcing Mental Illness, a nonprofit built on a movement of changing how we talk about mental health in the tech community. We'll talk about survey results from multiple years of OSMI's Mental Health In Tech surveys showing how employees feel about discussing mental health issues with employers and coworkers.
+
+We'll talk about resources, where and how to find help. The most important thing is to know you're not alone.

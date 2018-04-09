@@ -1,27 +1,23 @@
 <session-details>
   <div class="row">
-    <div class="col-md-12">
-      <h1>{session.name}</h1>
+    <div class="col-md-9 col-sm-9">
+      <h2>{session.name}</h2>
+      <p data-is="markdown-content" if="{session.description}" text="{session.description}"/>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <figure onclick="{showSpeakerDetails}">
-        <img alt="{speaker.name}" class="img-responsive center-block" src="{speaker.image}"/>
-      </figure>
-    </div>
-    <div class="col-md-8">
-      {session.description}
-    </div>
+    <speaker class="inmodal" speaker="{speaker}" image-click="{showSpeakerDetails}">
+      <yield to="after">
+        <div class="time">
+          <span class="fa fa-clock-o"></span> {parent.session.start_time} - {parent.session.end_time}<br>{parent.session.room}
+        </div>
+      </yield>
+    </speaker>
   </div>
 
   <script type="es6">
-    let tag = this
-
     this.session = opts.contentData.session
     this.speaker = app.getSpeaker(this.session.speaker)
 
-    this.showSpeakerDetails = (event) => {
+    this.showSpeakerDetails = () => {
       app.modal('speaker-details', { speaker: this.speaker })
     }
   </script>

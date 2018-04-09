@@ -1,14 +1,6 @@
 app.sponsors = {
-  platinum: [
-    // {
-    //   name: 'Thermo',
-    //   url: 'https://thermo.io',
-    //   logo: '/assets/images/sponsors/thermo_logo.svg',
-    // },
-  ],
-  gold: [
-
-  ],
+  platinum: [],
+  gold: [],
   silver: [
     {
       name: 'Yochana IT Solutions',
@@ -30,13 +22,14 @@ app.sponsors = {
       url: 'https://barracuda.com',
       logo: 'assets/images/sponsors/barracuda.svg',
     },
+    {
+      name: 'Thermo',
+      url: 'https://thermo.io',
+      logo: 'assets/images/sponsors/thermo_logo.svg',
+    },
   ],
-  bronze: [
-
-  ],
-  community: [
-
-  ],
+  bronze: [],
+  community: [],
   inkind: [
     {
       name: 'JetBrains',

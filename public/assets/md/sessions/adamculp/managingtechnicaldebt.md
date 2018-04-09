@@ -1,0 +1,1 @@
+Every change to a codebase increases technical debt leaving it less stable, bug-prone, and closer to technical bankruptcy requiring a rewrite. Let's explore how to measure technical debt to gain a score and highlight the current condition of a PHP application. We will then introduce simple steps for improving code quality, deliver new features faster, and lower project stress.

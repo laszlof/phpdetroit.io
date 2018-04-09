@@ -5,16 +5,19 @@
         <h3 class="section-title">Speakers</h3>
       </div>
     </div>
-    <div class="row">
-      <speaker
-        each="{speaker, ident in app.speakers}"
-        speaker="{speaker}"
-        id="speaker-{ident}"
-        onclick="{showSpeakerDetails}"/>
-    </div>
+    <virtual each="{row in speakers}">
+      <div class="row">
+        <speaker
+          each="{speaker in row}"
+          speaker="{speaker}"
+          id="speaker-{speaker.ident}"
+          image-click="{showSpeakerDetails}"/>
+      </div>
+    </virtual>
   </div>
 
   <script type="es6">
+    this.speakers = app.util.chunk(app.speakers, 4)
     this.showSpeakerDetails = (event) => {
       app.modal('speaker-details', event.item)
     }
