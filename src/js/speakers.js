@@ -110,6 +110,8 @@ app.speakers = [
     title: 'Cloudy Hills',
     social: {
       twitter: 'https://twitter.com/iansltx',
+      joindin: 'https://joind.in/user/iansltx',
+      github: 'https://github.com/iansltx',
     },
   },
   {
