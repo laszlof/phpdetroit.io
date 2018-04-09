@@ -19,10 +19,10 @@ body {
 
 a {
   color: #000;
+  text-decoration: underline;
 }
 .modal-content a {
   color: #ccc;
-  text-decoration: underline;
 }
 a:focus {
   outline: none;
@@ -140,15 +140,16 @@ ul li {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .section-title {
-  color: #313131;
+  color: #2a4066;
   letter-spacing: 1px;
   margin: 0 0 20px;
   text-transform: uppercase;
-  text-align: center;
+  border-bottom: 3px solid #2a4066;
+  padding: 10px 0;
 }
 
 .section-title span {
@@ -279,19 +280,6 @@ ul li {
 
 .bg-image-2::before {
   background-color: rgba(0, 0, 0, 0.7);
-}
-
-@media (min-width: 768px) {
-  .section {
-    padding: 120px 0;
-  }
-  .section-title {
-    color: #313131;
-    letter-spacing: 2.3px;
-    margin: 0 0 60px;
-    text-transform: uppercase;
-    text-align: left;
-  }
 }
 
 /*
@@ -453,10 +441,6 @@ ul li {
  * 6.1 Section: About
  */
 
-.about .section-title {
-  margin: 0 0 25px;
-}
-
 .about figure {
   margin-bottom: 25px;
 }
@@ -493,8 +477,8 @@ ul li {
   color: #fff;
   text-transform: uppercase;
   margin: 25px 0;
-  padding: 10px 12px;
-  background-color: #000;
+  padding: 1px 12px 0 12px;
+  background-color: #2a4066;
   border-radius: 4px;
 }
 .inmodal .speaker {
@@ -509,12 +493,13 @@ ul li {
 }
 
 .speaker h4 {
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .speaker p {
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 .speaker img:hover {
   opacity: .7;
@@ -526,10 +511,6 @@ ul li {
 
 .registration {
   background-color: #f8f8f8;
-}
-
-.registration .section-title {
-  text-align: center;
 }
 
 /*
@@ -718,6 +699,7 @@ a:focus, a:hover {
 
 .session-name {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .session-name:hover {
@@ -831,9 +813,6 @@ li.grid-item {
   }
   .grid-item-sm-3 {
     width: 25%;
-  }
-  .section-title {
-    margin: 0 0 30px;
   }
   figure {
     margin-bottom: 0;
@@ -980,18 +959,13 @@ Countdown jquery
   background-color: #000;
 }
 
-.countdown .col-md-2 {
-  /*background-color: #181818;*/
-}
-
-.countdown .section-title {
-  color: #fff;
-}
-
 @media (min-width: 768px) {
   .countdown .section-title {
     text-align: right;
     margin: 0;
+    color: #fff;
+    background-color: transparent;
+    border-bottom: none;
   }
 }
 
@@ -1121,13 +1095,10 @@ modal-window.open {
   position: relative;
   width: 80%;
   max-width: 65em;
-  height: 85vh;
   margin: 10vh auto;
   background: rgba(25, 38, 50, 0.9);
   color: #ddd;
   padding: 2em;
-  overflow-x: hidden;
-  overflow-y: scroll;
   z-index: 1;
 }
 .modal-content .section-title {
