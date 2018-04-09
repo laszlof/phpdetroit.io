@@ -2,18 +2,18 @@
   <div class="col-md-3 col-sm-3">
     <yield from="before"/>
     <div class="speaker">
+    	<h4>{opts.speaker.name}</h4>
       <figure onclick="{opts.imageClick}">
-        <img alt="{opts.speaker.name}" class="img-responsive center-block" src="{opts.speaker.image}">
+        <img alt="{opts.speaker.name}" class="img-responsive img-thumbnail center-block" src="{opts.speaker.image}">
       </figure>
-      <h4>{opts.speaker.name}</h4>
       <p>{opts.speaker.title}</p>
       <ul class="social-block" if="{opts.speaker.social}">
-        <li if="{opts.speaker.social.twitter}"><a href="{opts.speaker.social.twitter}"><i class="fa fa-twitter-square"></i></a></li>
-        <li if="{opts.speaker.social.facebook}"><a href="{opts.speaker.social.facebook}"><i class="fa fa-facebook"></i></a></li>
-        <li if="{opts.speaker.social.linkedin}"><a href="{opts.speaker.social.linkedin}"><i class="fa fa-linkedin"></i></a></li>
-        <li if="{opts.speaker.social.joindin}"><a href="{opts.speaker.social.joindin}"><img src="/assets/images/joindin.png"/></a></li>
-        <li if="{opts.speaker.social.github}"><a href="{opts.speaker.social.github}"><i class="fa fa-github"></i></a></li>
-        <li if="{opts.speaker.social.website}"><a href="{opts.speaker.social.website}"><i class="fa fa-chrome"></i></a></li>
+        <li if="{opts.speaker.social.twitter}"><a href="{opts.speaker.social.twitter}" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+        <li if="{opts.speaker.social.facebook}"><a href="{opts.speaker.social.facebook}" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+        <li if="{opts.speaker.social.linkedin}"><a href="{opts.speaker.social.linkedin}" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+        <li if="{opts.speaker.social.joindin}"><a href="{opts.speaker.social.joindin}" title="Joined.in"><img src="/assets/images/joindin.png" alt="Joind.in"></a></li>
+        <li if="{opts.speaker.social.github}"><a href="{opts.speaker.social.github}" title="GitHub"><i class="fa fa-github"></i></a></li>
+        <li if="{opts.speaker.social.website}"><a href="{opts.speaker.social.website}" title="Website"><i class="fa fa-chrome"></i></a></li>
       </ul>
     </div>
     <!-- /.speaker -->
