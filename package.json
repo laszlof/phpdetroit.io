@@ -9,7 +9,7 @@
     "dev": "grunt dev",
     "dist": "grunt dist",
     "test": "./node_modules/.bin/eslint --ext .js,.html Gruntfile.js src/* public/index.html; ./node_modules/.bin/htmlhint --config .htmlhintrc src/tags/*.html public/index.html",
-    "publish": "git pull && yarn && grunt prod"
+    "publish": "git pull && yarn && composer install && grunt prod"
   },
   "dependencies": {
     "bootstrap": "3.3.5",

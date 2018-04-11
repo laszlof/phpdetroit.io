@@ -1,0 +1,13 @@
+{
+    "name": "franksworld/phpdetroit.io",
+    "require": {
+        "sendgrid/sendgrid": "~6.2",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "authors": [
+        {
+            "name": "Frank Laszlo",
+            "email": "frank@phpdetroit.io"
+        }
+    ]
+}

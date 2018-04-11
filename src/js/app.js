@@ -84,6 +84,17 @@ window.app = ((app) => {
       xhr.timeout = 5000
       xhr.send(null)
     },
+    post: (url, data, callback) => {
+      let xhr = new XMLHttpRequest()
+      xhr.onload = () => {
+        if (xhr.readyState === 4) {
+          callback(xhr);
+        }
+      }
+      xhr.open('POST', url, true)
+      xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8')
+      xhr.send(JSON.stringify(data))
+    },
   }
 
   app.route('*', (target) => {
