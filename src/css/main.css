@@ -291,15 +291,13 @@ ul li {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #000;
-  -webkit-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.5s linear 0s;
+          transition: all 0.5s linear 0s;
 }
 
 @media (min-width: 768px) {
   .navbar-custom .site-branding .logo img {
-    width: auto;
-    -webkit-transition: width 0.2s;
-    transition: width 0.2s;
+    width: 159px;
   }
 }
 
@@ -342,8 +340,8 @@ ul li {
   .navbar-solid {
     background-color: #000 !important;
     padding: 0 !important;
-    -webkit-transition: all 0.2s linear 0s;
-    transition: all 0.2s linear 0s;
+    -webkit-transition: all 0.5s linear 0s;
+            transition: all 0.5s linear 0s;
   }
 }
 
@@ -366,18 +364,20 @@ ul li {
 .site-branding .logo img,
 .navbar-custom.navbar-solid .site-branding .logo img {
   width: 80px;
+  -webkit-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out;
 }
 
 .site-branding .logo span {
   padding-left: 10px;
   font-size: 14px;
-  -webkit-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.5s linear 0s;
+          transition: all 0.5s linear 0s;
 }
 
 .navbar-solid .site-branding .logo span {
-  -webkit-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.5s linear 0s;
+          transition: all 0.5s linear 0s;
 }
 
 .site-branding .logo:focus, .site-branding .logo:hover {
