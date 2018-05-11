@@ -14,17 +14,19 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 gold">
+        <div class="col-md-12 gold">
           <h5 class="sponsor-caption">Gold Sponsors</h5>
           <p if="{! app.sponsors.gold.length}"><strong>No Gold Sponsors</strong></p>
           <a each="{sponsor in app.sponsors.gold}" href="{sponsor.url}" target="_blank"><img src="{sponsor.logo}" title="{sponsor.name}"/></a>
         </div>
-        <div class="col-md-4 silver">
+      </div>
+      <div class="row">
+        <div class="col-md-6 silver">
           <h5 class="sponsor-caption">Silver Sponsors</h5>
           <p if="{! app.sponsors.silver.length}"><strong>No Silver Sponsors</strong></p>
           <a each="{sponsor in app.sponsors.silver}" href="{sponsor.url}" target="_blank"><img src="{sponsor.logo}" title="{sponsor.name}"/></a>
         </div>
-        <div class="col-md-4 bronze">
+        <div class="col-md-6 bronze">
           <h5 class="sponsor-caption">Bronze Sponsors</h5>
           <p if="{! app.sponsors.bronze.length}"><strong>No Bronze Sponsors</strong></p>
           <a each="{sponsor in app.sponsors.bronze}" href="{sponsor.url}" target="_blank"><img src="{sponsor.logo}" title="{sponsor.name}"/></a>
