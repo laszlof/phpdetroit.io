@@ -1,5 +1,16 @@
 app.sessions = [
   {
+    solo: true,
+    day: 1,
+    type: 'break',
+    name: 'Registration',
+    speaker: 'TBD',
+    start_time: '7:00am',
+    end_time: '8:00am',
+    room: 'Hallway',
+    description: '',
+  },
+  {
     track: [1],
     day: 1,
     type: 'tutorial',
@@ -52,6 +63,17 @@ app.sessions = [
     start_time: '1:00pm',
     end_time: '5:00pm',
     room: 'Salon B',
+    description: '',
+  },
+  {
+    solo: true,
+    day: 2,
+    type: 'break',
+    name: 'Registration',
+    speaker: 'TBD',
+    start_time: '7:00am',
+    end_time: '8:30am',
+    room: 'Hallway',
     description: '',
   },
   {
