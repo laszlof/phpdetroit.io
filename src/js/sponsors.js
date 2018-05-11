@@ -1,6 +1,12 @@
 app.sponsors = {
   platinum: [],
-  gold: [],
+  gold: [
+    {
+      name: 'Learning A-Z',
+      url: 'https://www.learninga-z.com/',
+      logo: 'assets/images/sponsors/learninga-z.svg',
+    },
+  ],
   silver: [
     {
       name: 'Yochana IT Solutions',
