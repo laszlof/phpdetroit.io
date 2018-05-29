@@ -33,6 +33,11 @@ app.sponsors = {
       url: 'https://thermo.io',
       logo: 'assets/images/sponsors/thermo_logo.svg',
     },
+    {
+      name: 'Learning Experiences',
+      url: 'https://www.learnxp.com',
+      logo: 'assets/images/sponsors/learning-xp.svg',
+    },
   ],
   bronze: [],
   community: [],
